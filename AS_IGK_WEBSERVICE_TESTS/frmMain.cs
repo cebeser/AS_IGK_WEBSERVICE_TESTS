@@ -16,8 +16,8 @@ namespace AS_IGK_WEBSERVICE_TESTS
             _authentication = new Authentication()
             {
                 FirmNR = "111",
-                Username = "testUser2",
-                Password = "testPassword2"
+                Username = "YOUR_AUTH_USERNAME",
+                Password = "YOUR_AUTH_PASSWORD"
             };
         }
 
