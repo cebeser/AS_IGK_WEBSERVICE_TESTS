@@ -1,0 +1,1374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://adminsoft.com.tr/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://adminsoft.com.tr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">It's all about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://adminsoft.com.tr/">
+      <s:element name="UserCheck">
+        <s:complexType />
+      </s:element>
+      <s:element name="UserCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentication" type="tns:Authentication" />
+      <s:complexType name="Authentication">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmNR" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetItemCardListByItemCardCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemCardListByItemCardCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemCardListByItemCardCodeResult" type="tns:ItemCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ItemCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PIECE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STGRPCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCERCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CYPHCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXTACCESSFLAGS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODCOUNTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GTIPCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORIGIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE5" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemCardList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetItemCardListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemCardListResult" type="tns:ArrayOfItemCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItemCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemCard" nillable="true" type="tns:ItemCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClientCardListByClientCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardListByClientCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardListByClientCodeResult" type="tns:ClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ClientCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ISPERSCOMP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CARDTYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SURNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADDR1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADDR2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOWNCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOWN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CITYCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRYCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POSTCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELCODES1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELCODES2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELNRS1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELNRS2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEXTNUMS1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEXTNUMS2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAXCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAXNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAXEXTNUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TCKNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TAXNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TAXOFFICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INCHARGE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INCHARGE2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INCHARGE3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAILADDR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAILADDR2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAILADDR3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CYPHCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXTACCESSFLAGS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACCEPTEINV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PURCHBRWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SALESBRWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMPBRWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXPBRWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FINBRWS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClientCardListByTCKN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCKN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardListByTCKNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardListByTCKNResult" type="tns:ClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardListByTAXNR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TAXNR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardListByTAXNRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardListByTAXNRResult" type="tns:ClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClientCardListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardListResult" type="tns:ArrayOfClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClientCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClientCard" nillable="true" type="tns:ClientCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveClientCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientCard" type="tns:ClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveClientCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveClientCardResult" type="tns:OutputMessageClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputMessageClientCard">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ClientCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveClientCardByTCKN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientCard" type="tns:ClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveClientCardByTCKNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveClientCardByTCKNResult" type="tns:OutputMessageClientCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardShippingAddressByClientCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardShippingAddressByClientCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardShippingAddressByClientCodeResult" type="tns:ArrayOfShipInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfShipInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ShipInfo" nillable="true" type="tns:ShipInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShipInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHIPINFOCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITLE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CYPHCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADDR1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADDR2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOWNCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOWN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CITYCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRYCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POSTCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELNRS1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELNRS2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAXNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TAXNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TAXOFFICE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClientCardShippingAddressByShipInfoCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShipInfoCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardShippingAddressByShipInfoCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardShippingAddressByShipInfoCodeResult" type="tns:ArrayOfShipInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientCardShippingAddressList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClientCardShippingAddressListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientCardShippingAddressListResult" type="tns:ArrayOfShipInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveClientCardShippingAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="shipInfo" type="tns:ShipInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveClientCardShippingAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveClientCardShippingAddressResult" type="tns:OutputMessageShipInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputMessageShipInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ShipInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWarehouseList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWarehouseListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWarehouseListResult" type="tns:ArrayOfWarehouse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWarehouse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Warehouse" nillable="true" type="tns:Warehouse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Warehouse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FIRMNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDivisionList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDivisionListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDivisionListResult" type="tns:ArrayOfDivision" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDivision">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Division" nillable="true" type="tns:Division" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Division">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIRMNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetServiceCardList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CardType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceCardListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceCardListResult" type="tns:ArrayOfServiceCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfServiceCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceCard" nillable="true" type="tns:ServiceCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceCard">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LOGICALREF" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTIVE" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="CARDTYPE" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SPECODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CYPHCODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAT" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="UNITSETREF" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveSalesOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salesOrder" type="tns:SalesOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SalesOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARP_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYMENT_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTES1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WITH_PAYMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_WH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_COST_GRP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHIPLOC_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDER_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRSEL_TOTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_DISCOUNTED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_VAT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_GROSS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRANSACTIONS" type="tns:TRANSACTIONS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TRANSACTIONS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Item">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MASTER_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QUANTITY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_BASE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRANS_DESCRIPTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CONV1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CONV2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_INCLUDED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DUE_DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_WH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_COST_GRP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDT_CURR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG_DUE_DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG_QUANTITY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG_PRICE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveSalesOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSalesOrderResult" type="tns:OutputMessageSalesOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputMessageSalesOrder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:SalesOrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPayPlanList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPayPlanListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPayPlanListResult" type="tns:ArrayOfPayPlan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPayPlan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PayPlan" nillable="true" type="tns:PayPlan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PayPlan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCountriesList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCountriesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesListResult" type="tns:ArrayOfCountry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCountry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Country">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCitiesList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCitiesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesListResult" type="tns:ArrayOfCity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="City">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRYREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTownsList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTownsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTownsListResult" type="tns:ArrayOfTown" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTown">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Town" nillable="true" type="tns:Town" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Town">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CITYREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRYREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetInstallmentsListByTCKNForIGKProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCKN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="INTEREST_RATE" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstallmentsListByTCKNForIGKProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInstallmentsListByTCKNForIGKProjectResult" type="tns:ArrayOfInstallment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInstallment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Installment" nillable="true" type="tns:Installment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Installment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTALLMENT_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDER_DESCRIPTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDER_NUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDER_DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDER_YEAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INSTALLMENT_NUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENT_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENT_DEFINITION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENT_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENT_SURNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENT_TCKN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYMENT_DUE_DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PASSED_DAY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INTEREST_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INTEREST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYABLE_SUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAID_SUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INSTALLMENT_LEFT_PAID_SUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYABLE_SUM_WITH_INTEREST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYMENT_STATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UserCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:UserCheck" />
+  </wsdl:message>
+  <wsdl:message name="UserCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:UserCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserCheckAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListByItemCardCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemCardListByItemCardCode" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListByItemCardCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemCardListByItemCardCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListByItemCardCodeAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemCardList" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemCardListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemCardListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByClientCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByClientCode" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByClientCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByClientCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByClientCodeAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTCKNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByTCKN" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTCKNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByTCKNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTCKNAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTAXNRSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByTAXNR" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTAXNRSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardListByTAXNRResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListByTAXNRAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveClientCard" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveClientCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardByTCKNSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveClientCardByTCKN" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardByTCKNSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveClientCardByTCKNResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardByTCKNAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByClientCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressByClientCode" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByClientCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressByClientCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByClientCodeAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByShipInfoCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressByShipInfoCode" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByShipInfoCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressByShipInfoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressByShipInfoCodeAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientCardShippingAddressListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientCardShippingAddressListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardShippingAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveClientCardShippingAddress" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardShippingAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveClientCardShippingAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveClientCardShippingAddressAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWarehouseList" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWarehouseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetDivisionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDivisionList" />
+  </wsdl:message>
+  <wsdl:message name="GetDivisionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDivisionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDivisionListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCardListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceCardList" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCardListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceCardListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCardListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="SaveSalesOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSalesOrder" />
+  </wsdl:message>
+  <wsdl:message name="SaveSalesOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSalesOrderAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetPayPlanListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPayPlanList" />
+  </wsdl:message>
+  <wsdl:message name="GetPayPlanListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPayPlanListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPayPlanListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountriesList" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCitiesList" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetTownsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTownsList" />
+  </wsdl:message>
+  <wsdl:message name="GetTownsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTownsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTownsListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallmentsListByTCKNForIGKProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInstallmentsListByTCKNForIGKProject" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallmentsListByTCKNForIGKProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInstallmentsListByTCKNForIGKProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallmentsListByTCKNForIGKProjectAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:portType name="LogoSoap">
+    <wsdl:operation name="UserCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can check your authentication status</wsdl:documentation>
+      <wsdl:input message="tns:UserCheckSoapIn" />
+      <wsdl:output message="tns:UserCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardListByItemCardCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get spesific itemcard list belong itemcard code</wsdl:documentation>
+      <wsdl:input message="tns:GetItemCardListByItemCardCodeSoapIn" />
+      <wsdl:output message="tns:GetItemCardListByItemCardCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of itemcard list</wsdl:documentation>
+      <wsdl:input message="tns:GetItemCardListSoapIn" />
+      <wsdl:output message="tns:GetItemCardListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByClientCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get spesific clientcard list belong clientcard code</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardListByClientCodeSoapIn" />
+      <wsdl:output message="tns:GetClientCardListByClientCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTCKN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get spesific clientcard list belong TCKN</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardListByTCKNSoapIn" />
+      <wsdl:output message="tns:GetClientCardListByTCKNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTAXNR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get spesific clientcard list belong TAXNR</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardListByTAXNRSoapIn" />
+      <wsdl:output message="tns:GetClientCardListByTAXNRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of clientcard list</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardListSoapIn" />
+      <wsdl:output message="tns:GetClientCardListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can create or update a clientcard</wsdl:documentation>
+      <wsdl:input message="tns:SaveClientCardSoapIn" />
+      <wsdl:output message="tns:SaveClientCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardByTCKN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can create or update a clientcard by TCKN. TCKN must be unique</wsdl:documentation>
+      <wsdl:input message="tns:SaveClientCardByTCKNSoapIn" />
+      <wsdl:output message="tns:SaveClientCardByTCKNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByClientCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of shipping address list belong clientcard code</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardShippingAddressByClientCodeSoapIn" />
+      <wsdl:output message="tns:GetClientCardShippingAddressByClientCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByShipInfoCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of shipping address list belong ShipInfoCode code</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardShippingAddressByShipInfoCodeSoapIn" />
+      <wsdl:output message="tns:GetClientCardShippingAddressByShipInfoCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of shipping address list belong clientcard</wsdl:documentation>
+      <wsdl:input message="tns:GetClientCardShippingAddressListSoapIn" />
+      <wsdl:output message="tns:GetClientCardShippingAddressListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardShippingAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set the shipping address to the clientcard</wsdl:documentation>
+      <wsdl:input message="tns:SaveClientCardShippingAddressSoapIn" />
+      <wsdl:output message="tns:SaveClientCardShippingAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of warehouse list</wsdl:documentation>
+      <wsdl:input message="tns:GetWarehouseListSoapIn" />
+      <wsdl:output message="tns:GetWarehouseListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDivisionList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of division list</wsdl:documentation>
+      <wsdl:input message="tns:GetDivisionListSoapIn" />
+      <wsdl:output message="tns:GetDivisionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCardList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of division list</wsdl:documentation>
+      <wsdl:input message="tns:GetServiceCardListSoapIn" />
+      <wsdl:output message="tns:GetServiceCardListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set a new sales order</wsdl:documentation>
+      <wsdl:input message="tns:SaveSalesOrderSoapIn" />
+      <wsdl:output message="tns:SaveSalesOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayPlanList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of pay plans</wsdl:documentation>
+      <wsdl:input message="tns:GetPayPlanListSoapIn" />
+      <wsdl:output message="tns:GetPayPlanListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of countrie list</wsdl:documentation>
+      <wsdl:input message="tns:GetCountriesListSoapIn" />
+      <wsdl:output message="tns:GetCountriesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of cities list</wsdl:documentation>
+      <wsdl:input message="tns:GetCitiesListSoapIn" />
+      <wsdl:output message="tns:GetCitiesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTownsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of towns list</wsdl:documentation>
+      <wsdl:input message="tns:GetTownsListSoapIn" />
+      <wsdl:output message="tns:GetTownsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentsListByTCKNForIGKProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of installment list by TCKN</wsdl:documentation>
+      <wsdl:input message="tns:GetInstallmentsListByTCKNForIGKProjectSoapIn" />
+      <wsdl:output message="tns:GetInstallmentsListByTCKNForIGKProjectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LogoSoap" type="tns:LogoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserCheck">
+      <soap:operation soapAction="http://adminsoft.com.tr/UserCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UserCheckAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardListByItemCardCode">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetItemCardListByItemCardCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetItemCardListByItemCardCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetItemCardList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetItemCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByClientCode">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardListByClientCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardListByClientCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTCKN">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardListByTCKN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardListByTCKNAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTAXNR">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardListByTAXNR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardListByTAXNRAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCard">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveClientCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveClientCardAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardByTCKN">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveClientCardByTCKN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveClientCardByTCKNAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByClientCode">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressByClientCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardShippingAddressByClientCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByShipInfoCode">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressByShipInfoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardShippingAddressByShipInfoCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetClientCardShippingAddressListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardShippingAddress">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveClientCardShippingAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveClientCardShippingAddressAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetWarehouseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetWarehouseListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDivisionList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetDivisionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDivisionListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCardList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetServiceCardList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServiceCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesOrder">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveSalesOrderAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayPlanList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetPayPlanList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPayPlanListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetCountriesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCountriesListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetCitiesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCitiesListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTownsList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetTownsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTownsListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentsListByTCKNForIGKProject">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetInstallmentsListByTCKNForIGKProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInstallmentsListByTCKNForIGKProjectAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LogoSoap12" type="tns:LogoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserCheck">
+      <soap12:operation soapAction="http://adminsoft.com.tr/UserCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UserCheckAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardListByItemCardCode">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetItemCardListByItemCardCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetItemCardListByItemCardCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCardList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetItemCardList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetItemCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByClientCode">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardListByClientCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardListByClientCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTCKN">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardListByTCKN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardListByTCKNAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardListByTAXNR">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardListByTAXNR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardListByTAXNRAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCard">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveClientCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveClientCardAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardByTCKN">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveClientCardByTCKN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveClientCardByTCKNAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByClientCode">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressByClientCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardShippingAddressByClientCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressByShipInfoCode">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressByShipInfoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardShippingAddressByShipInfoCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCardShippingAddressList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetClientCardShippingAddressList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetClientCardShippingAddressListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClientCardShippingAddress">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveClientCardShippingAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveClientCardShippingAddressAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetWarehouseList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetWarehouseListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDivisionList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetDivisionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDivisionListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCardList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetServiceCardList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServiceCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesOrder">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveSalesOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveSalesOrderAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayPlanList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetPayPlanList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPayPlanListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetCountriesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCountriesListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetCitiesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCitiesListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTownsList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetTownsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTownsListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentsListByTCKNForIGKProject">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetInstallmentsListByTCKNForIGKProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetInstallmentsListByTCKNForIGKProjectAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Logo">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">It's all about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft</wsdl:documentation>
+    <wsdl:port name="LogoSoap" binding="tns:LogoSoap">
+      <soap:address location="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LogoSoap12" binding="tns:LogoSoap12">
+      <soap12:address location="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
