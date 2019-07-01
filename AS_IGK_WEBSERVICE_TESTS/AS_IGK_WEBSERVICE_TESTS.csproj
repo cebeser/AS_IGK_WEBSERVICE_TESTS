@@ -186,9 +186,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\Logo.wsdl" />
-    <None Include="Documents\Shared\dokuman_LOGO_v1_20190617.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v2_20190624.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v3_20190625.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v1_0_20190617.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v2_0_20190624.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v3_0_20190625.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v3_1_20190701.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
