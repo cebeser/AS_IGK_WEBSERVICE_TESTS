@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://adminsoft.com.tr/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://adminsoft.com.tr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">It's all about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft</wsdl:documentation>
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">v1.0: It's just about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft &lt;br/&gt; v4.0: Now, It's for third party integrations (Bank, ArpOrder, SalesOrder etc.) - Enis Kurtay YILMAZ @ Adminsoft &lt;br/&gt;&lt;a href='https://github.com/eniskurtayyilmaz/AS_IGK_WEBSERVICE_TESTS/' href='_blank'&gt;Document Download &lt;/a&gt;</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://adminsoft.com.tr/">
       <s:element name="UserCheck">
@@ -138,6 +138,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="IMPBRWS" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="EXPBRWS" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="FINBRWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ISFOREIGN" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetClientCardListByTCKN">
@@ -414,20 +415,20 @@
           <s:element minOccurs="0" maxOccurs="1" name="TOTAL_NET" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="RC_RATE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="RC_NET" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="TRANSACTIONS" type="tns:TRANSACTIONS" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRANSACTIONS" type="tns:SalesTransaction" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="TRANSACTIONS">
+      <s:complexType name="SalesTransaction">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfSalesItem" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfItem">
+      <s:complexType name="ArrayOfSalesItem">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SalesItem" nillable="true" type="tns:SalesItem" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Item">
+      <s:complexType name="SalesItem">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="MASTER_CODE" type="s:string" />
@@ -604,6 +605,156 @@
           <s:element minOccurs="0" maxOccurs="1" name="PAYMENT_STATUS" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="SaveArpOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arpOrder" type="tns:ArpOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArpOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_DEBIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_CREDIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_TOTAL_DEBIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_TOTAL_CREDIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRANSACTIONS" type="tns:ArpTransaction" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARP_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BANKACC_CODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArpTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfArpItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfArpItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArpItem" nillable="true" type="tns:ArpItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArpItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARP_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GL_POSTED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEBIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CREDIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIGN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURR_TRANS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BNLN_TC_CURR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BNLN_TC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BNLN_TC_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRSEL_TRANS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCOUNTED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCOUNT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCOUNTED_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCACCREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCCENREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATRACCREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAYMENT_LIST" type="tns:PaymentList" />
+          <s:element minOccurs="0" maxOccurs="1" name="BANKACC_CODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfArpItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveArpOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveArpOrderResult" type="tns:OutputMessageArpOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputMessageArpOrder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArpOrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankCardList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBankCardListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankCardListResult" type="tns:ArrayOfBankCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBankCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BankCard" nillable="true" type="tns:BankCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BankCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION_" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankAccountCardsByBANKREF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BANKREF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccountCardsByBANKREFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankAccountCardsByBANKREFResult" type="tns:ArrayOfBankAccountCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBankAccountCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BankAccountCard" nillable="true" type="tns:BankAccountCard" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BankAccountCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CARDTYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEFINITION_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BANKREF" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankAccountCardsByCARDTYPE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARDTYPE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccountCardsByCARDTYPEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankAccountCardsByCARDTYPEResult" type="tns:ArrayOfBankAccountCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="UserCheckSoapIn">
@@ -804,6 +955,42 @@
   <wsdl:message name="GetInstallmentsListByTCKNForIGKProjectAuthentication">
     <wsdl:part name="Authentication" element="tns:Authentication" />
   </wsdl:message>
+  <wsdl:message name="SaveArpOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveArpOrder" />
+  </wsdl:message>
+  <wsdl:message name="SaveArpOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveArpOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveArpOrderAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetBankCardListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankCardList" />
+  </wsdl:message>
+  <wsdl:message name="GetBankCardListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankCardListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankCardListAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByBANKREFSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankAccountCardsByBANKREF" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByBANKREFSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankAccountCardsByBANKREFResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByBANKREFAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByCARDTYPESoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankAccountCardsByCARDTYPE" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByCARDTYPESoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankAccountCardsByCARDTYPEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountCardsByCARDTYPEAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
   <wsdl:portType name="LogoSoap">
     <wsdl:operation name="UserCheck">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can check your authentication status</wsdl:documentation>
@@ -914,6 +1101,26 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of installment list by TCKN</wsdl:documentation>
       <wsdl:input message="tns:GetInstallmentsListByTCKNForIGKProjectSoapIn" />
       <wsdl:output message="tns:GetInstallmentsListByTCKNForIGKProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveArpOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set new arp order</wsdl:documentation>
+      <wsdl:input message="tns:SaveArpOrderSoapIn" />
+      <wsdl:output message="tns:SaveArpOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankCardList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of bankcard list</wsdl:documentation>
+      <wsdl:input message="tns:GetBankCardListSoapIn" />
+      <wsdl:output message="tns:GetBankCardListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByBANKREF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of bank account card list by BANKREF</wsdl:documentation>
+      <wsdl:input message="tns:GetBankAccountCardsByBANKREFSoapIn" />
+      <wsdl:output message="tns:GetBankAccountCardsByBANKREFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByCARDTYPE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of bank account card list by CARDTYPE</wsdl:documentation>
+      <wsdl:input message="tns:GetBankAccountCardsByCARDTYPESoapIn" />
+      <wsdl:output message="tns:GetBankAccountCardsByCARDTYPESoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="LogoSoap" type="tns:LogoSoap">
@@ -1133,6 +1340,46 @@
       <wsdl:input>
         <soap:body use="literal" />
         <soap:header message="tns:GetInstallmentsListByTCKNForIGKProjectAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveArpOrder">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveArpOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveArpOrderAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankCardList">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetBankCardList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBankCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByBANKREF">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetBankAccountCardsByBANKREF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBankAccountCardsByBANKREFAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByCARDTYPE">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetBankAccountCardsByCARDTYPE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBankAccountCardsByCARDTYPEAuthentication" part="Authentication" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -1361,9 +1608,49 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SaveArpOrder">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveArpOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveArpOrderAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankCardList">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetBankCardList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBankCardListAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByBANKREF">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetBankAccountCardsByBANKREF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBankAccountCardsByBANKREFAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountCardsByCARDTYPE">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetBankAccountCardsByCARDTYPE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBankAccountCardsByCARDTYPEAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Logo">
-    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">It's all about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft</wsdl:documentation>
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">v1.0: It's just about Clients, Itemcards and Orders - Enis Kurtay YILMAZ @ Adminsoft &lt;br/&gt; v4.0: Now, It's for third party integrations (Bank, ArpOrder, SalesOrder etc.) - Enis Kurtay YILMAZ @ Adminsoft &lt;br/&gt;&lt;a href='https://github.com/eniskurtayyilmaz/AS_IGK_WEBSERVICE_TESTS/' href='_blank'&gt;Document Download &lt;/a&gt;</wsdl:documentation>
     <wsdl:port name="LogoSoap" binding="tns:LogoSoap">
       <soap:address location="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx" />
     </wsdl:port>

@@ -190,6 +190,38 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetInstallmentsListByTCKNForIGKProject", ReplyAction="*")]
         System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse> GetInstallmentsListByTCKNForIGKProjectAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectRequest request);
+        
+        // CODEGEN: Generating message contract since message SaveArpOrderRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveArpOrder", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse SaveArpOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveArpOrder", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse> SaveArpOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request);
+        
+        // CODEGEN: Generating message contract since message GetBankCardListRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankCardList", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankCardList", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request);
+        
+        // CODEGEN: Generating message contract since message GetBankAccountCardsByBANKREFRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankAccountCardsByBANKREF", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse GetBankAccountCardsByBANKREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankAccountCardsByBANKREF", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse> GetBankAccountCardsByBANKREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request);
+        
+        // CODEGEN: Generating message contract since message GetBankAccountCardsByCARDTYPERequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankAccountCardsByCARDTYPE", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse GetBankAccountCardsByCARDTYPE(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankAccountCardsByCARDTYPE", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request);
     }
     
     /// <remarks/>
@@ -253,6 +285,902 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             set {
                 this.anyAttrField = value;
                 this.RaisePropertyChanged("AnyAttr");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class BankAccountCard : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string lOGICALREFField;
+        
+        private string cARDTYPEField;
+        
+        private string cODEField;
+        
+        private string dEFINITION_Field;
+        
+        private string bANKREFField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LOGICALREF {
+            get {
+                return this.lOGICALREFField;
+            }
+            set {
+                this.lOGICALREFField = value;
+                this.RaisePropertyChanged("LOGICALREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string CARDTYPE {
+            get {
+                return this.cARDTYPEField;
+            }
+            set {
+                this.cARDTYPEField = value;
+                this.RaisePropertyChanged("CARDTYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string CODE {
+            get {
+                return this.cODEField;
+            }
+            set {
+                this.cODEField = value;
+                this.RaisePropertyChanged("CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string DEFINITION_ {
+            get {
+                return this.dEFINITION_Field;
+            }
+            set {
+                this.dEFINITION_Field = value;
+                this.RaisePropertyChanged("DEFINITION_");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string BANKREF {
+            get {
+                return this.bANKREFField;
+            }
+            set {
+                this.bANKREFField = value;
+                this.RaisePropertyChanged("BANKREF");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class BankCard : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string lOGICALREFField;
+        
+        private string cODEField;
+        
+        private string dEFINITION_Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LOGICALREF {
+            get {
+                return this.lOGICALREFField;
+            }
+            set {
+                this.lOGICALREFField = value;
+                this.RaisePropertyChanged("LOGICALREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string CODE {
+            get {
+                return this.cODEField;
+            }
+            set {
+                this.cODEField = value;
+                this.RaisePropertyChanged("CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DEFINITION_ {
+            get {
+                return this.dEFINITION_Field;
+            }
+            set {
+                this.dEFINITION_Field = value;
+                this.RaisePropertyChanged("DEFINITION_");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class OutputMessageArpOrder : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int codeField;
+        
+        private string descriptionField;
+        
+        private ArpOrder dataField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+                this.RaisePropertyChanged("Code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public ArpOrder Data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+                this.RaisePropertyChanged("Data");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class ArpOrder : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string lOGICALREFField;
+        
+        private string nUMBERField;
+        
+        private string dATEField;
+        
+        private string tYPEField;
+        
+        private string dIVISIONField;
+        
+        private string dEPARTMENTField;
+        
+        private string tOTAL_DEBITField;
+        
+        private string tOTAL_CREDITField;
+        
+        private string rC_TOTAL_DEBITField;
+        
+        private string rC_TOTAL_CREDITField;
+        
+        private ArpTransaction tRANSACTIONSField;
+        
+        private string aRP_CODEField;
+        
+        private string bANKACC_CODEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LOGICALREF {
+            get {
+                return this.lOGICALREFField;
+            }
+            set {
+                this.lOGICALREFField = value;
+                this.RaisePropertyChanged("LOGICALREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string NUMBER {
+            get {
+                return this.nUMBERField;
+            }
+            set {
+                this.nUMBERField = value;
+                this.RaisePropertyChanged("NUMBER");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DATE {
+            get {
+                return this.dATEField;
+            }
+            set {
+                this.dATEField = value;
+                this.RaisePropertyChanged("DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string TYPE {
+            get {
+                return this.tYPEField;
+            }
+            set {
+                this.tYPEField = value;
+                this.RaisePropertyChanged("TYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string DIVISION {
+            get {
+                return this.dIVISIONField;
+            }
+            set {
+                this.dIVISIONField = value;
+                this.RaisePropertyChanged("DIVISION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string DEPARTMENT {
+            get {
+                return this.dEPARTMENTField;
+            }
+            set {
+                this.dEPARTMENTField = value;
+                this.RaisePropertyChanged("DEPARTMENT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string TOTAL_DEBIT {
+            get {
+                return this.tOTAL_DEBITField;
+            }
+            set {
+                this.tOTAL_DEBITField = value;
+                this.RaisePropertyChanged("TOTAL_DEBIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string TOTAL_CREDIT {
+            get {
+                return this.tOTAL_CREDITField;
+            }
+            set {
+                this.tOTAL_CREDITField = value;
+                this.RaisePropertyChanged("TOTAL_CREDIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string RC_TOTAL_DEBIT {
+            get {
+                return this.rC_TOTAL_DEBITField;
+            }
+            set {
+                this.rC_TOTAL_DEBITField = value;
+                this.RaisePropertyChanged("RC_TOTAL_DEBIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string RC_TOTAL_CREDIT {
+            get {
+                return this.rC_TOTAL_CREDITField;
+            }
+            set {
+                this.rC_TOTAL_CREDITField = value;
+                this.RaisePropertyChanged("RC_TOTAL_CREDIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public ArpTransaction TRANSACTIONS {
+            get {
+                return this.tRANSACTIONSField;
+            }
+            set {
+                this.tRANSACTIONSField = value;
+                this.RaisePropertyChanged("TRANSACTIONS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string ARP_CODE {
+            get {
+                return this.aRP_CODEField;
+            }
+            set {
+                this.aRP_CODEField = value;
+                this.RaisePropertyChanged("ARP_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string BANKACC_CODE {
+            get {
+                return this.bANKACC_CODEField;
+            }
+            set {
+                this.bANKACC_CODEField = value;
+                this.RaisePropertyChanged("BANKACC_CODE");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class ArpTransaction : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private ArpItem[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public ArpItem[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class ArpItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string lOGICALREFField;
+        
+        private string aRP_CODEField;
+        
+        private string dATEField;
+        
+        private string dEPARTMENTField;
+        
+        private string dIVISIONField;
+        
+        private string tRCODEField;
+        
+        private string gL_POSTEDField;
+        
+        private string dEBITField;
+        
+        private string cREDITField;
+        
+        private string sIGNField;
+        
+        private string aMOUNTField;
+        
+        private string cURR_TRANSField;
+        
+        private string tC_XRATEField;
+        
+        private string tC_AMOUNTField;
+        
+        private string rC_XRATEField;
+        
+        private string rC_AMOUNTField;
+        
+        private string bNLN_TC_CURRField;
+        
+        private string bNLN_TC_XRATEField;
+        
+        private string bNLN_TC_AMOUNTField;
+        
+        private string cURRSEL_TRANSField;
+        
+        private string dISCOUNTEDField;
+        
+        private string dISCOUNT_RATEField;
+        
+        private string vAT_RATEField;
+        
+        private string dISCOUNTED_AMOUNTField;
+        
+        private string dISCACCREFField;
+        
+        private string dISCCENREFField;
+        
+        private string vATRACCREFField;
+        
+        private PaymentList pAYMENT_LISTField;
+        
+        private string bANKACC_CODEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LOGICALREF {
+            get {
+                return this.lOGICALREFField;
+            }
+            set {
+                this.lOGICALREFField = value;
+                this.RaisePropertyChanged("LOGICALREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string ARP_CODE {
+            get {
+                return this.aRP_CODEField;
+            }
+            set {
+                this.aRP_CODEField = value;
+                this.RaisePropertyChanged("ARP_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DATE {
+            get {
+                return this.dATEField;
+            }
+            set {
+                this.dATEField = value;
+                this.RaisePropertyChanged("DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string DEPARTMENT {
+            get {
+                return this.dEPARTMENTField;
+            }
+            set {
+                this.dEPARTMENTField = value;
+                this.RaisePropertyChanged("DEPARTMENT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string DIVISION {
+            get {
+                return this.dIVISIONField;
+            }
+            set {
+                this.dIVISIONField = value;
+                this.RaisePropertyChanged("DIVISION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string TRCODE {
+            get {
+                return this.tRCODEField;
+            }
+            set {
+                this.tRCODEField = value;
+                this.RaisePropertyChanged("TRCODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string GL_POSTED {
+            get {
+                return this.gL_POSTEDField;
+            }
+            set {
+                this.gL_POSTEDField = value;
+                this.RaisePropertyChanged("GL_POSTED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string DEBIT {
+            get {
+                return this.dEBITField;
+            }
+            set {
+                this.dEBITField = value;
+                this.RaisePropertyChanged("DEBIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string CREDIT {
+            get {
+                return this.cREDITField;
+            }
+            set {
+                this.cREDITField = value;
+                this.RaisePropertyChanged("CREDIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string SIGN {
+            get {
+                return this.sIGNField;
+            }
+            set {
+                this.sIGNField = value;
+                this.RaisePropertyChanged("SIGN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string AMOUNT {
+            get {
+                return this.aMOUNTField;
+            }
+            set {
+                this.aMOUNTField = value;
+                this.RaisePropertyChanged("AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string CURR_TRANS {
+            get {
+                return this.cURR_TRANSField;
+            }
+            set {
+                this.cURR_TRANSField = value;
+                this.RaisePropertyChanged("CURR_TRANS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string TC_XRATE {
+            get {
+                return this.tC_XRATEField;
+            }
+            set {
+                this.tC_XRATEField = value;
+                this.RaisePropertyChanged("TC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string TC_AMOUNT {
+            get {
+                return this.tC_AMOUNTField;
+            }
+            set {
+                this.tC_AMOUNTField = value;
+                this.RaisePropertyChanged("TC_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string RC_XRATE {
+            get {
+                return this.rC_XRATEField;
+            }
+            set {
+                this.rC_XRATEField = value;
+                this.RaisePropertyChanged("RC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string RC_AMOUNT {
+            get {
+                return this.rC_AMOUNTField;
+            }
+            set {
+                this.rC_AMOUNTField = value;
+                this.RaisePropertyChanged("RC_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string BNLN_TC_CURR {
+            get {
+                return this.bNLN_TC_CURRField;
+            }
+            set {
+                this.bNLN_TC_CURRField = value;
+                this.RaisePropertyChanged("BNLN_TC_CURR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string BNLN_TC_XRATE {
+            get {
+                return this.bNLN_TC_XRATEField;
+            }
+            set {
+                this.bNLN_TC_XRATEField = value;
+                this.RaisePropertyChanged("BNLN_TC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string BNLN_TC_AMOUNT {
+            get {
+                return this.bNLN_TC_AMOUNTField;
+            }
+            set {
+                this.bNLN_TC_AMOUNTField = value;
+                this.RaisePropertyChanged("BNLN_TC_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string CURRSEL_TRANS {
+            get {
+                return this.cURRSEL_TRANSField;
+            }
+            set {
+                this.cURRSEL_TRANSField = value;
+                this.RaisePropertyChanged("CURRSEL_TRANS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string DISCOUNTED {
+            get {
+                return this.dISCOUNTEDField;
+            }
+            set {
+                this.dISCOUNTEDField = value;
+                this.RaisePropertyChanged("DISCOUNTED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string DISCOUNT_RATE {
+            get {
+                return this.dISCOUNT_RATEField;
+            }
+            set {
+                this.dISCOUNT_RATEField = value;
+                this.RaisePropertyChanged("DISCOUNT_RATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string VAT_RATE {
+            get {
+                return this.vAT_RATEField;
+            }
+            set {
+                this.vAT_RATEField = value;
+                this.RaisePropertyChanged("VAT_RATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string DISCOUNTED_AMOUNT {
+            get {
+                return this.dISCOUNTED_AMOUNTField;
+            }
+            set {
+                this.dISCOUNTED_AMOUNTField = value;
+                this.RaisePropertyChanged("DISCOUNTED_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string DISCACCREF {
+            get {
+                return this.dISCACCREFField;
+            }
+            set {
+                this.dISCACCREFField = value;
+                this.RaisePropertyChanged("DISCACCREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string DISCCENREF {
+            get {
+                return this.dISCCENREFField;
+            }
+            set {
+                this.dISCCENREFField = value;
+                this.RaisePropertyChanged("DISCCENREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string VATRACCREF {
+            get {
+                return this.vATRACCREFField;
+            }
+            set {
+                this.vATRACCREFField = value;
+                this.RaisePropertyChanged("VATRACCREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public PaymentList PAYMENT_LIST {
+            get {
+                return this.pAYMENT_LISTField;
+            }
+            set {
+                this.pAYMENT_LISTField = value;
+                this.RaisePropertyChanged("PAYMENT_LIST");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string BANKACC_CODE {
+            get {
+                return this.bANKACC_CODEField;
+            }
+            set {
+                this.bANKACC_CODEField = value;
+                this.RaisePropertyChanged("BANKACC_CODE");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class PaymentList : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private ArpItem[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public ArpItem[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
             }
         }
         
@@ -956,7 +1884,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         private string rC_NETField;
         
-        private TRANSACTIONS tRANSACTIONSField;
+        private SalesTransaction tRANSACTIONSField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -1212,7 +2140,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=21)]
-        public TRANSACTIONS TRANSACTIONS {
+        public SalesTransaction TRANSACTIONS {
             get {
                 return this.tRANSACTIONSField;
             }
@@ -1238,13 +2166,13 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
-    public partial class TRANSACTIONS : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SalesTransaction : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private Item[] itemsField;
+        private SalesItem[] itemsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public Item[] items {
+        public SalesItem[] items {
             get {
                 return this.itemsField;
             }
@@ -1270,7 +2198,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
-    public partial class Item : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SalesItem : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string tYPEField;
         
@@ -2432,6 +3360,8 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         private string fINBRWSField;
         
+        private string iSFOREIGNField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string LOGICALREF {
@@ -3005,6 +3935,18 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             set {
                 this.fINBRWSField = value;
                 this.RaisePropertyChanged("FINBRWS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public string ISFOREIGN {
+            get {
+                return this.iSFOREIGNField;
+            }
+            set {
+                this.iSFOREIGNField = value;
+                this.RaisePropertyChanged("ISFOREIGN");
             }
         }
         
@@ -4102,6 +5044,154 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveArpOrder", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveArpOrderRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ArpOrder arpOrder;
+        
+        public SaveArpOrderRequest() {
+        }
+        
+        public SaveArpOrderRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ArpOrder arpOrder) {
+            this.Authentication = Authentication;
+            this.arpOrder = arpOrder;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveArpOrderResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveArpOrderResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageArpOrder SaveArpOrderResult;
+        
+        public SaveArpOrderResponse() {
+        }
+        
+        public SaveArpOrderResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageArpOrder SaveArpOrderResult) {
+            this.SaveArpOrderResult = SaveArpOrderResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankCardList", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankCardListRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        public GetBankCardListRequest() {
+        }
+        
+        public GetBankCardListRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
+            this.Authentication = Authentication;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankCardListResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankCardListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankCard[] GetBankCardListResult;
+        
+        public GetBankCardListResponse() {
+        }
+        
+        public GetBankCardListResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankCard[] GetBankCardListResult) {
+            this.GetBankCardListResult = GetBankCardListResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankAccountCardsByBANKREF", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankAccountCardsByBANKREFRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public string BANKREF;
+        
+        public GetBankAccountCardsByBANKREFRequest() {
+        }
+        
+        public GetBankAccountCardsByBANKREFRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string BANKREF) {
+            this.Authentication = Authentication;
+            this.BANKREF = BANKREF;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankAccountCardsByBANKREFResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankAccountCardsByBANKREFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByBANKREFResult;
+        
+        public GetBankAccountCardsByBANKREFResponse() {
+        }
+        
+        public GetBankAccountCardsByBANKREFResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByBANKREFResult) {
+            this.GetBankAccountCardsByBANKREFResult = GetBankAccountCardsByBANKREFResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankAccountCardsByCARDTYPE", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankAccountCardsByCARDTYPERequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public string CARDTYPE;
+        
+        public GetBankAccountCardsByCARDTYPERequest() {
+        }
+        
+        public GetBankAccountCardsByCARDTYPERequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string CARDTYPE) {
+            this.Authentication = Authentication;
+            this.CARDTYPE = CARDTYPE;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankAccountCardsByCARDTYPEResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetBankAccountCardsByCARDTYPEResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByCARDTYPEResult;
+        
+        public GetBankAccountCardsByCARDTYPEResponse() {
+        }
+        
+        public GetBankAccountCardsByCARDTYPEResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByCARDTYPEResult) {
+            this.GetBankAccountCardsByCARDTYPEResult = GetBankAccountCardsByCARDTYPEResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface LogoSoapChannel : AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap, System.ServiceModel.IClientChannel {
     }
@@ -4659,6 +5749,104 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             inValue.TCKN = TCKN;
             inValue.INTEREST_RATE = INTEREST_RATE;
             return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetInstallmentsListByTCKNForIGKProjectAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveArpOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
+            return base.Channel.SaveArpOrder(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageArpOrder SaveArpOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ArpOrder arpOrder) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest();
+            inValue.Authentication = Authentication;
+            inValue.arpOrder = arpOrder;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveArpOrder(inValue);
+            return retVal.SaveArpOrderResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveArpOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
+            return base.Channel.SaveArpOrderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse> SaveArpOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ArpOrder arpOrder) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest();
+            inValue.Authentication = Authentication;
+            inValue.arpOrder = arpOrder;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveArpOrderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
+            return base.Channel.GetBankCardList(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankCard[] GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest();
+            inValue.Authentication = Authentication;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankCardList(inValue);
+            return retVal.GetBankCardListResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
+            return base.Channel.GetBankCardListAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest();
+            inValue.Authentication = Authentication;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankCardListAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByBANKREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
+            return base.Channel.GetBankAccountCardsByBANKREF(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByBANKREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string BANKREF) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest();
+            inValue.Authentication = Authentication;
+            inValue.BANKREF = BANKREF;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByBANKREF(inValue);
+            return retVal.GetBankAccountCardsByBANKREFResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByBANKREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
+            return base.Channel.GetBankAccountCardsByBANKREFAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse> GetBankAccountCardsByBANKREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string BANKREF) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest();
+            inValue.Authentication = Authentication;
+            inValue.BANKREF = BANKREF;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByBANKREFAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByCARDTYPE(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
+            return base.Channel.GetBankAccountCardsByCARDTYPE(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard[] GetBankAccountCardsByCARDTYPE(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string CARDTYPE) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest();
+            inValue.Authentication = Authentication;
+            inValue.CARDTYPE = CARDTYPE;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByCARDTYPE(inValue);
+            return retVal.GetBankAccountCardsByCARDTYPEResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
+            return base.Channel.GetBankAccountCardsByCARDTYPEAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string CARDTYPE) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest();
+            inValue.Authentication = Authentication;
+            inValue.CARDTYPE = CARDTYPE;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByCARDTYPEAsync(inValue);
         }
     }
 }

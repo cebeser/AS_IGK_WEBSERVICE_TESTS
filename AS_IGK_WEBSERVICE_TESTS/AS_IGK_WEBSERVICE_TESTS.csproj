@@ -77,6 +77,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankAccountCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.City.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -87,6 +93,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Division.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse.datasource">
@@ -146,6 +161,9 @@
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ItemCard.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageArpOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageClientCard.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -156,6 +174,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.PayPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse.datasource">
@@ -190,6 +211,8 @@
     <None Include="Documents\Shared\dokuman_LOGO_v2_0_20190624.pdf" />
     <None Include="Documents\Shared\dokuman_LOGO_v3_0_20190625.pdf" />
     <None Include="Documents\Shared\dokuman_LOGO_v3_1_20190701.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v3_2_20190705.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_v4_0_20190709.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

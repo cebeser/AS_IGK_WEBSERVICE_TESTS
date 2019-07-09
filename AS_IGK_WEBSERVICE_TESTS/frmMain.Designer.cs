@@ -36,6 +36,9 @@
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnGetInstallmentsListByTCKNForIGKProject = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGetBankCardList = new System.Windows.Forms.Button();
+            this.btnGetBankAccountCardsByCARDTYPE = new System.Windows.Forms.Button();
+            this.btnSaveArpOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +86,7 @@
             // 
             this.btnSaveSalesOrder.Location = new System.Drawing.Point(48, 203);
             this.btnSaveSalesOrder.Name = "btnSaveSalesOrder";
-            this.btnSaveSalesOrder.Size = new System.Drawing.Size(152, 23);
+            this.btnSaveSalesOrder.Size = new System.Drawing.Size(223, 23);
             this.btnSaveSalesOrder.TabIndex = 4;
             this.btnSaveSalesOrder.Text = "SaveSalesOrder";
             this.btnSaveSalesOrder.UseVisualStyleBackColor = true;
@@ -115,11 +118,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(519, 214);
             this.dataGridView1.TabIndex = 7;
             // 
+            // btnGetBankCardList
+            // 
+            this.btnGetBankCardList.Location = new System.Drawing.Point(48, 287);
+            this.btnGetBankCardList.Name = "btnGetBankCardList";
+            this.btnGetBankCardList.Size = new System.Drawing.Size(223, 23);
+            this.btnGetBankCardList.TabIndex = 8;
+            this.btnGetBankCardList.Text = "GetBankCardList";
+            this.btnGetBankCardList.UseVisualStyleBackColor = true;
+            this.btnGetBankCardList.Click += new System.EventHandler(this.btnGetBankCardList_Click);
+            // 
+            // btnGetBankAccountCardsByCARDTYPE
+            // 
+            this.btnGetBankAccountCardsByCARDTYPE.Location = new System.Drawing.Point(48, 333);
+            this.btnGetBankAccountCardsByCARDTYPE.Name = "btnGetBankAccountCardsByCARDTYPE";
+            this.btnGetBankAccountCardsByCARDTYPE.Size = new System.Drawing.Size(223, 23);
+            this.btnGetBankAccountCardsByCARDTYPE.TabIndex = 9;
+            this.btnGetBankAccountCardsByCARDTYPE.Text = "GetBankAccountCardsByCARDTYPE";
+            this.btnGetBankAccountCardsByCARDTYPE.UseVisualStyleBackColor = true;
+            this.btnGetBankAccountCardsByCARDTYPE.Click += new System.EventHandler(this.btnGetBankAccountCardsByCARDTYPE_Click);
+            // 
+            // btnSaveArpOrder
+            // 
+            this.btnSaveArpOrder.Location = new System.Drawing.Point(48, 371);
+            this.btnSaveArpOrder.Name = "btnSaveArpOrder";
+            this.btnSaveArpOrder.Size = new System.Drawing.Size(223, 23);
+            this.btnSaveArpOrder.TabIndex = 10;
+            this.btnSaveArpOrder.Text = "SaveArpOrder";
+            this.btnSaveArpOrder.UseVisualStyleBackColor = true;
+            this.btnSaveArpOrder.Click += new System.EventHandler(this.btnSaveArpOrder_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 563);
+            this.Controls.Add(this.btnSaveArpOrder);
+            this.Controls.Add(this.btnGetBankAccountCardsByCARDTYPE);
+            this.Controls.Add(this.btnGetBankCardList);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGetInstallmentsListByTCKNForIGKProject);
             this.Controls.Add(this.txtStatus);
@@ -146,6 +182,9 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnGetInstallmentsListByTCKNForIGKProject;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGetBankCardList;
+        private System.Windows.Forms.Button btnGetBankAccountCardsByCARDTYPE;
+        private System.Windows.Forms.Button btnSaveArpOrder;
     }
 }
 
