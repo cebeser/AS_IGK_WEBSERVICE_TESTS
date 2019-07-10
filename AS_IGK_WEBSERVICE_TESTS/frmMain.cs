@@ -7,7 +7,7 @@ namespace AS_IGK_WEBSERVICE_TESTS
 {
     public partial class frmMain : Form
     {
-        ServiceReferenceLOGO.LogoSoapClient _serviceReferenceLogo = new LogoSoapClient();
+        ServiceReferenceLOGO.LOGOTIGERSoapClient _serviceReferenceLogo = new LOGOTIGERSoapClient();
         ServiceReferenceLOGO.Authentication _authentication = new Authentication();
 
         public frmMain()
@@ -17,7 +17,8 @@ namespace AS_IGK_WEBSERVICE_TESTS
             {
                 FirmNR = "111",
                 Username = "bizpark",
-                Password = "6420435c-ed9b-4002-bd16-e85e70238c94"
+                Password = "6420435c-ed9b-4002-bd16-e85e70238c94",
+                PeriodNR = "1"
             };
         }
 

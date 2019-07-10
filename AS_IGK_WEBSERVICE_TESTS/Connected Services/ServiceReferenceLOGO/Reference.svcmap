@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://94.130.137.85/AS_LOGOWEBSERVICE/LOGOTIGER.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Logo.wsdl" MetadataType="Wsdl" ID="4ed7dd6d-9829-4546-acdb-4bafd5007c09" SourceId="1" SourceUrl="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx?wsdl" />
-    <MetadataFile FileName="Logo.disco" MetadataType="Disco" ID="3e967834-ae16-4d2c-9ee6-c8f7cf772bdc" SourceId="1" SourceUrl="http://94.130.137.85/AS_LOGOWEBSERVICE/Logo.asmx?disco" />
+    <MetadataFile FileName="LOGOTIGER.disco" MetadataType="Disco" ID="cb04b112-d91e-4ab8-8a5b-761cf09f90a1" SourceId="1" SourceUrl="http://94.130.137.85/AS_LOGOWEBSERVICE/LOGOTIGER.asmx?disco" />
+    <MetadataFile FileName="LOGOTIGER.wsdl" MetadataType="Wsdl" ID="774d50dd-2018-47bc-a6d4-28132a8afb87" SourceId="1" SourceUrl="http://94.130.137.85/AS_LOGOWEBSERVICE/LOGOTIGER.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

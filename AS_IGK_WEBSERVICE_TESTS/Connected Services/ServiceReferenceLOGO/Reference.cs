@@ -12,8 +12,8 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://adminsoft.com.tr/", ConfigurationName="ServiceReferenceLOGO.LogoSoap")]
-    public interface LogoSoap {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://adminsoft.com.tr/", ConfigurationName="ServiceReferenceLOGO.LOGOTIGERSoap")]
+    public interface LOGOTIGERSoap {
         
         // CODEGEN: Generating message contract since message UserCheckRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/UserCheck", ReplyAction="*")]
@@ -238,6 +238,10 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         private string firmNRField;
         
+        private string periodNRField;
+        
+        private string workNRField;
+        
         private System.Xml.XmlAttribute[] anyAttrField;
         
         /// <remarks/>
@@ -273,6 +277,30 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             set {
                 this.firmNRField = value;
                 this.RaisePropertyChanged("FirmNR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string PeriodNR {
+            get {
+                return this.periodNRField;
+            }
+            set {
+                this.periodNRField = value;
+                this.RaisePropertyChanged("PeriodNR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string WorkNR {
+            get {
+                return this.workNRField;
+            }
+            set {
+                this.workNRField = value;
+                this.RaisePropertyChanged("WorkNR");
             }
         }
         
@@ -5193,57 +5221,57 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface LogoSoapChannel : AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap, System.ServiceModel.IClientChannel {
+    public interface LOGOTIGERSoapChannel : AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class LogoSoapClient : System.ServiceModel.ClientBase<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap>, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap {
+    public partial class LOGOTIGERSoapClient : System.ServiceModel.ClientBase<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap>, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap {
         
-        public LogoSoapClient() {
+        public LOGOTIGERSoapClient() {
         }
         
-        public LogoSoapClient(string endpointConfigurationName) : 
+        public LOGOTIGERSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public LogoSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public LOGOTIGERSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public LogoSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public LOGOTIGERSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public LogoSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public LOGOTIGERSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.UserCheck(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.UserCheck(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest request) {
             return base.Channel.UserCheck(request);
         }
         
         public string UserCheck(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).UserCheck(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).UserCheck(inValue);
             return retVal.UserCheckResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.UserCheckAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.UserCheckAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest request) {
             return base.Channel.UserCheckAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckResponse> UserCheckAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.UserCheckRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).UserCheckAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).UserCheckAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetItemCardListByItemCardCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetItemCardListByItemCardCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest request) {
             return base.Channel.GetItemCardListByItemCardCode(request);
         }
         
@@ -5251,12 +5279,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ItemCode = ItemCode;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetItemCardListByItemCardCode(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetItemCardListByItemCardCode(inValue);
             return retVal.GetItemCardListByItemCardCodeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetItemCardListByItemCardCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetItemCardListByItemCardCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest request) {
             return base.Channel.GetItemCardListByItemCardCodeAsync(request);
         }
         
@@ -5264,34 +5292,34 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListByItemCardCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ItemCode = ItemCode;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetItemCardListByItemCardCodeAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetItemCardListByItemCardCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetItemCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetItemCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest request) {
             return base.Channel.GetItemCardList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ItemCard[] GetItemCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetItemCardList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetItemCardList(inValue);
             return retVal.GetItemCardListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetItemCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetItemCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest request) {
             return base.Channel.GetItemCardListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListResponse> GetItemCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetItemCardListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetItemCardListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetItemCardListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByClientCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByClientCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest request) {
             return base.Channel.GetClientCardListByClientCode(request);
         }
         
@@ -5299,12 +5327,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCode = ClientCode;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByClientCode(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByClientCode(inValue);
             return retVal.GetClientCardListByClientCodeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByClientCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByClientCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest request) {
             return base.Channel.GetClientCardListByClientCodeAsync(request);
         }
         
@@ -5312,11 +5340,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByClientCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCode = ClientCode;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByClientCodeAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByClientCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByTCKN(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByTCKN(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest request) {
             return base.Channel.GetClientCardListByTCKN(request);
         }
         
@@ -5324,12 +5352,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest();
             inValue.Authentication = Authentication;
             inValue.TCKN = TCKN;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByTCKN(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByTCKN(inValue);
             return retVal.GetClientCardListByTCKNResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByTCKNAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByTCKNAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest request) {
             return base.Channel.GetClientCardListByTCKNAsync(request);
         }
         
@@ -5337,11 +5365,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTCKNRequest();
             inValue.Authentication = Authentication;
             inValue.TCKN = TCKN;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByTCKNAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByTCKNAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByTAXNR(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByTAXNR(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest request) {
             return base.Channel.GetClientCardListByTAXNR(request);
         }
         
@@ -5349,12 +5377,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest();
             inValue.Authentication = Authentication;
             inValue.TAXNR = TAXNR;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByTAXNR(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByTAXNR(inValue);
             return retVal.GetClientCardListByTAXNRResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListByTAXNRAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListByTAXNRAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest request) {
             return base.Channel.GetClientCardListByTAXNRAsync(request);
         }
         
@@ -5362,34 +5390,34 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListByTAXNRRequest();
             inValue.Authentication = Authentication;
             inValue.TAXNR = TAXNR;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListByTAXNRAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListByTAXNRAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest request) {
             return base.Channel.GetClientCardList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ClientCard[] GetClientCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardList(inValue);
             return retVal.GetClientCardListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest request) {
             return base.Channel.GetClientCardListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListResponse> GetClientCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCard(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCard(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest request) {
             return base.Channel.SaveClientCard(request);
         }
         
@@ -5397,12 +5425,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCard = ClientCard;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCard(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCard(inValue);
             return retVal.SaveClientCardResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCardAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCardAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest request) {
             return base.Channel.SaveClientCardAsync(request);
         }
         
@@ -5410,11 +5438,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCard = ClientCard;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCardAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCardAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCardByTCKN(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCardByTCKN(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest request) {
             return base.Channel.SaveClientCardByTCKN(request);
         }
         
@@ -5422,12 +5450,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCard = ClientCard;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCardByTCKN(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCardByTCKN(inValue);
             return retVal.SaveClientCardByTCKNResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCardByTCKNAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCardByTCKNAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest request) {
             return base.Channel.SaveClientCardByTCKNAsync(request);
         }
         
@@ -5435,11 +5463,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCard = ClientCard;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCardByTCKNAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCardByTCKNAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressByClientCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressByClientCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest request) {
             return base.Channel.GetClientCardShippingAddressByClientCode(request);
         }
         
@@ -5447,12 +5475,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCode = ClientCode;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressByClientCode(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressByClientCode(inValue);
             return retVal.GetClientCardShippingAddressByClientCodeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressByClientCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressByClientCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest request) {
             return base.Channel.GetClientCardShippingAddressByClientCodeAsync(request);
         }
         
@@ -5460,11 +5488,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByClientCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ClientCode = ClientCode;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressByClientCodeAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressByClientCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressByShipInfoCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressByShipInfoCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest request) {
             return base.Channel.GetClientCardShippingAddressByShipInfoCode(request);
         }
         
@@ -5472,12 +5500,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ShipInfoCode = ShipInfoCode;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressByShipInfoCode(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressByShipInfoCode(inValue);
             return retVal.GetClientCardShippingAddressByShipInfoCodeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressByShipInfoCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressByShipInfoCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest request) {
             return base.Channel.GetClientCardShippingAddressByShipInfoCodeAsync(request);
         }
         
@@ -5485,34 +5513,34 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressByShipInfoCodeRequest();
             inValue.Authentication = Authentication;
             inValue.ShipInfoCode = ShipInfoCode;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressByShipInfoCodeAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressByShipInfoCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest request) {
             return base.Channel.GetClientCardShippingAddressList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.ShipInfo[] GetClientCardShippingAddressList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressList(inValue);
             return retVal.GetClientCardShippingAddressListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetClientCardShippingAddressListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetClientCardShippingAddressListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest request) {
             return base.Channel.GetClientCardShippingAddressListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListResponse> GetClientCardShippingAddressListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetClientCardShippingAddressListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetClientCardShippingAddressListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetClientCardShippingAddressListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCardShippingAddress(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCardShippingAddress(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest request) {
             return base.Channel.SaveClientCardShippingAddress(request);
         }
         
@@ -5520,12 +5548,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest();
             inValue.Authentication = Authentication;
             inValue.shipInfo = shipInfo;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCardShippingAddress(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCardShippingAddress(inValue);
             return retVal.SaveClientCardShippingAddressResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveClientCardShippingAddressAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveClientCardShippingAddressAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest request) {
             return base.Channel.SaveClientCardShippingAddressAsync(request);
         }
         
@@ -5533,57 +5561,57 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressRequest();
             inValue.Authentication = Authentication;
             inValue.shipInfo = shipInfo;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveClientCardShippingAddressAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveClientCardShippingAddressAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetWarehouseList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetWarehouseList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest request) {
             return base.Channel.GetWarehouseList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Warehouse[] GetWarehouseList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetWarehouseList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetWarehouseList(inValue);
             return retVal.GetWarehouseListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetWarehouseListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetWarehouseListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest request) {
             return base.Channel.GetWarehouseListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListResponse> GetWarehouseListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetWarehouseListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetWarehouseListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetWarehouseListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetDivisionList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetDivisionList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest request) {
             return base.Channel.GetDivisionList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Division[] GetDivisionList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetDivisionList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetDivisionList(inValue);
             return retVal.GetDivisionListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetDivisionListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetDivisionListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest request) {
             return base.Channel.GetDivisionListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListResponse> GetDivisionListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetDivisionListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetDivisionListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetDivisionListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetServiceCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetServiceCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest request) {
             return base.Channel.GetServiceCardList(request);
         }
         
@@ -5591,12 +5619,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest();
             inValue.Authentication = Authentication;
             inValue.CardType = CardType;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetServiceCardList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetServiceCardList(inValue);
             return retVal.GetServiceCardListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetServiceCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetServiceCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest request) {
             return base.Channel.GetServiceCardListAsync(request);
         }
         
@@ -5604,11 +5632,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListRequest();
             inValue.Authentication = Authentication;
             inValue.CardType = CardType;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetServiceCardListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetServiceCardListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveSalesOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveSalesOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest request) {
             return base.Channel.SaveSalesOrder(request);
         }
         
@@ -5616,12 +5644,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest();
             inValue.Authentication = Authentication;
             inValue.salesOrder = salesOrder;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveSalesOrder(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveSalesOrder(inValue);
             return retVal.SaveSalesOrderResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveSalesOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveSalesOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest request) {
             return base.Channel.SaveSalesOrderAsync(request);
         }
         
@@ -5629,103 +5657,103 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderRequest();
             inValue.Authentication = Authentication;
             inValue.salesOrder = salesOrder;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveSalesOrderAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveSalesOrderAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetPayPlanList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetPayPlanList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest request) {
             return base.Channel.GetPayPlanList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.PayPlan[] GetPayPlanList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetPayPlanList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetPayPlanList(inValue);
             return retVal.GetPayPlanListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetPayPlanListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetPayPlanListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest request) {
             return base.Channel.GetPayPlanListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse> GetPayPlanListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetPayPlanListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetPayPlanListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetCountriesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetCountriesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest request) {
             return base.Channel.GetCountriesList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Country[] GetCountriesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetCountriesList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetCountriesList(inValue);
             return retVal.GetCountriesListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetCountriesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetCountriesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest request) {
             return base.Channel.GetCountriesListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListResponse> GetCountriesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCountriesListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetCountriesListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetCountriesListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetCitiesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetCitiesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest request) {
             return base.Channel.GetCitiesList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.City[] GetCitiesList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetCitiesList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetCitiesList(inValue);
             return retVal.GetCitiesListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetCitiesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetCitiesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest request) {
             return base.Channel.GetCitiesListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListResponse> GetCitiesListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetCitiesListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetCitiesListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetCitiesListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetTownsList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetTownsList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest request) {
             return base.Channel.GetTownsList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Town[] GetTownsList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetTownsList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetTownsList(inValue);
             return retVal.GetTownsListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetTownsListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetTownsListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest request) {
             return base.Channel.GetTownsListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListResponse> GetTownsListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetTownsListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetTownsListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetTownsListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetInstallmentsListByTCKNForIGKProject(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetInstallmentsListByTCKNForIGKProject(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectRequest request) {
             return base.Channel.GetInstallmentsListByTCKNForIGKProject(request);
         }
         
@@ -5734,12 +5762,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             inValue.Authentication = Authentication;
             inValue.TCKN = TCKN;
             inValue.INTEREST_RATE = INTEREST_RATE;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetInstallmentsListByTCKNForIGKProject(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetInstallmentsListByTCKNForIGKProject(inValue);
             return retVal.GetInstallmentsListByTCKNForIGKProjectResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetInstallmentsListByTCKNForIGKProjectAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetInstallmentsListByTCKNForIGKProjectAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetInstallmentsListByTCKNForIGKProjectRequest request) {
             return base.Channel.GetInstallmentsListByTCKNForIGKProjectAsync(request);
         }
         
@@ -5748,11 +5776,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             inValue.Authentication = Authentication;
             inValue.TCKN = TCKN;
             inValue.INTEREST_RATE = INTEREST_RATE;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetInstallmentsListByTCKNForIGKProjectAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetInstallmentsListByTCKNForIGKProjectAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveArpOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveArpOrder(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
             return base.Channel.SaveArpOrder(request);
         }
         
@@ -5760,12 +5788,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest();
             inValue.Authentication = Authentication;
             inValue.arpOrder = arpOrder;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveArpOrder(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveArpOrder(inValue);
             return retVal.SaveArpOrderResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.SaveArpOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveArpOrderAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest request) {
             return base.Channel.SaveArpOrderAsync(request);
         }
         
@@ -5773,34 +5801,34 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderRequest();
             inValue.Authentication = Authentication;
             inValue.arpOrder = arpOrder;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).SaveArpOrderAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveArpOrderAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
             return base.Channel.GetBankCardList(request);
         }
         
         public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.BankCard[] GetBankCardList(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest();
             inValue.Authentication = Authentication;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankCardList(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankCardList(inValue);
             return retVal.GetBankCardListResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest request) {
             return base.Channel.GetBankCardListAsync(request);
         }
         
         public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListResponse> GetBankCardListAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication) {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankCardListRequest();
             inValue.Authentication = Authentication;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankCardListAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankCardListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByBANKREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankAccountCardsByBANKREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
             return base.Channel.GetBankAccountCardsByBANKREF(request);
         }
         
@@ -5808,12 +5836,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest();
             inValue.Authentication = Authentication;
             inValue.BANKREF = BANKREF;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByBANKREF(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankAccountCardsByBANKREF(inValue);
             return retVal.GetBankAccountCardsByBANKREFResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByBANKREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankAccountCardsByBANKREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest request) {
             return base.Channel.GetBankAccountCardsByBANKREFAsync(request);
         }
         
@@ -5821,11 +5849,11 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByBANKREFRequest();
             inValue.Authentication = Authentication;
             inValue.BANKREF = BANKREF;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByBANKREFAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankAccountCardsByBANKREFAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByCARDTYPE(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankAccountCardsByCARDTYPE(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
             return base.Channel.GetBankAccountCardsByCARDTYPE(request);
         }
         
@@ -5833,12 +5861,12 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest();
             inValue.Authentication = Authentication;
             inValue.CARDTYPE = CARDTYPE;
-            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByCARDTYPE(inValue);
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankAccountCardsByCARDTYPE(inValue);
             return retVal.GetBankAccountCardsByCARDTYPEResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap.GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request) {
             return base.Channel.GetBankAccountCardsByCARDTYPEAsync(request);
         }
         
@@ -5846,7 +5874,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest();
             inValue.Authentication = Authentication;
             inValue.CARDTYPE = CARDTYPE;
-            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LogoSoap)(this)).GetBankAccountCardsByCARDTYPEAsync(inValue);
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankAccountCardsByCARDTYPEAsync(inValue);
         }
     }
 }

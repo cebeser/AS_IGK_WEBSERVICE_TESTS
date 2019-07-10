@@ -206,13 +206,14 @@
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Warehouse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReferenceLOGO\Logo.wsdl" />
-    <None Include="Documents\Shared\dokuman_LOGO_v1_0_20190617.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v2_0_20190624.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v3_0_20190625.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v3_1_20190701.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v3_2_20190705.pdf" />
-    <None Include="Documents\Shared\dokuman_LOGO_v4_0_20190709.pdf" />
+    <None Include="Connected Services\ServiceReferenceLOGO\LOGOTIGER.wsdl" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v1_0_20190617.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v2_0_20190624.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v3_0_20190625.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v3_1_20190701.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v3_2_20190705.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v4_0_20190709.pdf" />
+    <None Include="Documents\Shared\dokuman_LOGO_TIGER_v5_0_20190710.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -233,9 +234,6 @@
     <WCFMetadataStorage Include="Connected Services\ServiceReferenceLOGO\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferenceLOGO\Logo.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\ServiceReferenceLOGO\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +245,8 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReferenceLOGO\LOGOTIGER.disco" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
