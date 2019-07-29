@@ -141,6 +141,8 @@
           <s:element minOccurs="0" maxOccurs="1" name="EXPBRWS" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="FINBRWS" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ISFOREIGN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POSTLABELCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENDERLABELCODE" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetClientCardListByTCKN">
@@ -622,6 +624,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTES1" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TOTAL_DEBIT" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TOTAL_CREDIT" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="RC_TOTAL_DEBIT" type="s:string" />
@@ -646,6 +649,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ARP_CODE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TRCODE" type="s:string" />
@@ -754,6 +758,182 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetBankAccountCardsByCARDTYPEResult" type="tns:ArrayOfBankAccountCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSalesInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salesInvoice" type="tns:SalesInvoice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SalesInvoice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMBER" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATE" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTES1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARP_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_WH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCE_COST_GRP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHIPLOC_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADD_DISCOUNTS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_DISCOUNTS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_DISCOUNTED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_VAT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_GROSS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURR_INVOICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIVISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTORY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRANSACTIONS" type="tns:SalesInvoiceTransaction" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_ADD_DISCOUNTS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_DISCOUNTS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_DISCOUNTED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_ADD_EXPENSES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_EXPENSES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_DIST_EXPENSE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_DEPOZITO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_PROMOTIONS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_VAT_INC_GROSS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_VAT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_GROSS_TOTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_ADD_TAX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHINFO_TOTAL_EX_ADD_TAX" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DOC_DATE" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AUTOFILL_SLDETAILS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EINVOICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EINVOICE_EINVOICETYPSGK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRCURR_GLOBAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDTCURR_GLOBAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRSEL_TOTALS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRSEL_DETAILS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SalesInvoiceTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfSalesInvoiceItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSalesInvoiceItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SalesInvoiceItem" nillable="true" type="tns:SalesInvoiceItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SalesInvoiceItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MASTER_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRCODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATE" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETAIL_LEVEL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCEXP_CALC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCEINDEX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOURCECOSTGRP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IOCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QUANTITY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURR_PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC_PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURR_TRANSACTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RC_XRATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COST_DISTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCOUNT_DISTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXPENSE_DISTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROMOTION_DISTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISCOUNT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BASE_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CONV1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_CONV2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_INCLUDED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_RATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT_BASE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BILLED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAL_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISTADDEXP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDT_CURR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDT_PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_INTERNAL_REFERNCE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_TRANS_REF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_PRICE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_TOTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_DIST_COST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_DIST_DISC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_DIST_EXP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_DIST_PROM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_VAT_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_VAT_MATRAH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_LINE_NET" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_DIST_ADD_EXP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_NET_DISC_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_VAT_CALC_DIFF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_EU_VAT_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_ADD_TAX_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_ADD_TAX_CONV_FACT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_ADD_TAX_DISC_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_EX_ADD_TAX_AMOUNT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_EX_ADD_TAX_CONVF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADD_TAX_VAT_MATRAH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHLINE_ADD_TAX_VAT_MATRAH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADD_TAX_REF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIT_GLOBAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRCURR_GLOBAL_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDTCURR_GLOBAL_CODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveSalesInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSalesInvoiceResult" type="tns:OutputMessageSalesInvoice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputMessageSalesInvoice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:SalesInvoice" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSalesInvoiceByLOGICALREF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LOGICALREF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSalesInvoiceByLOGICALREFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSalesInvoiceByLOGICALREFResult" type="tns:SalesInvoice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAutoGIBAddressByClientCardCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAutoGIBAddressByClientCardCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveAutoGIBAddressByClientCardCodeResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -993,6 +1173,33 @@
   <wsdl:message name="GetBankAccountCardsByCARDTYPEAuthentication">
     <wsdl:part name="Authentication" element="tns:Authentication" />
   </wsdl:message>
+  <wsdl:message name="SaveSalesInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSalesInvoice" />
+  </wsdl:message>
+  <wsdl:message name="SaveSalesInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSalesInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSalesInvoiceAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesInvoiceByLOGICALREFSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSalesInvoiceByLOGICALREF" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesInvoiceByLOGICALREFSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSalesInvoiceByLOGICALREFResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesInvoiceByLOGICALREFAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="SaveAutoGIBAddressByClientCardCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveAutoGIBAddressByClientCardCode" />
+  </wsdl:message>
+  <wsdl:message name="SaveAutoGIBAddressByClientCardCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveAutoGIBAddressByClientCardCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveAutoGIBAddressByClientCardCodeAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
   <wsdl:portType name="LOGOTIGERSoap">
     <wsdl:operation name="UserCheck">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can check your authentication status</wsdl:documentation>
@@ -1123,6 +1330,21 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can get all of bank account card list by CARDTYPE</wsdl:documentation>
       <wsdl:input message="tns:GetBankAccountCardsByCARDTYPESoapIn" />
       <wsdl:output message="tns:GetBankAccountCardsByCARDTYPESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesInvoice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set new sales invoice</wsdl:documentation>
+      <wsdl:input message="tns:SaveSalesInvoiceSoapIn" />
+      <wsdl:output message="tns:SaveSalesInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesInvoiceByLOGICALREF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set get sales invoice by LOGICALREF</wsdl:documentation>
+      <wsdl:input message="tns:GetSalesInvoiceByLOGICALREFSoapIn" />
+      <wsdl:output message="tns:GetSalesInvoiceByLOGICALREFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoGIBAddressByClientCardCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">You can set e-invoice address for an client card by client code</wsdl:documentation>
+      <wsdl:input message="tns:SaveAutoGIBAddressByClientCardCodeSoapIn" />
+      <wsdl:output message="tns:SaveAutoGIBAddressByClientCardCodeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="LOGOTIGERSoap" type="tns:LOGOTIGERSoap">
@@ -1387,6 +1609,36 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SaveSalesInvoice">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveSalesInvoiceAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesInvoiceByLOGICALREF">
+      <soap:operation soapAction="http://adminsoft.com.tr/GetSalesInvoiceByLOGICALREF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSalesInvoiceByLOGICALREFAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoGIBAddressByClientCardCode">
+      <soap:operation soapAction="http://adminsoft.com.tr/SaveAutoGIBAddressByClientCardCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveAutoGIBAddressByClientCardCodeAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="LOGOTIGERSoap12" type="tns:LOGOTIGERSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1645,6 +1897,36 @@
       <wsdl:input>
         <soap12:body use="literal" />
         <soap12:header message="tns:GetBankAccountCardsByCARDTYPEAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesInvoice">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveSalesInvoiceAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesInvoiceByLOGICALREF">
+      <soap12:operation soapAction="http://adminsoft.com.tr/GetSalesInvoiceByLOGICALREF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSalesInvoiceByLOGICALREFAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoGIBAddressByClientCardCode">
+      <soap12:operation soapAction="http://adminsoft.com.tr/SaveAutoGIBAddressByClientCardCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveAutoGIBAddressByClientCardCodeAuthentication" part="Authentication" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

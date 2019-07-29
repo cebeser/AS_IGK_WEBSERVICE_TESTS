@@ -146,6 +146,9 @@
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetPayPlanListResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetServiceCardListResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -167,6 +170,9 @@
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageClientCard.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageSalesInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageSalesOrder.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -176,7 +182,13 @@
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.PayPlan.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveArpOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardByTCKNResponse.datasource">
@@ -186,6 +198,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveClientCardShippingAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReferenceLOGO\AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesOrderResponse.datasource">

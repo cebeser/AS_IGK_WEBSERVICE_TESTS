@@ -222,6 +222,30 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetBankAccountCardsByCARDTYPE", ReplyAction="*")]
         System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPEResponse> GetBankAccountCardsByCARDTYPEAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetBankAccountCardsByCARDTYPERequest request);
+        
+        // CODEGEN: Generating message contract since message SaveSalesInvoiceRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveSalesInvoice", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse SaveSalesInvoice(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveSalesInvoice", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse> SaveSalesInvoiceAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest request);
+        
+        // CODEGEN: Generating message contract since message GetSalesInvoiceByLOGICALREFRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetSalesInvoiceByLOGICALREF", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse GetSalesInvoiceByLOGICALREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/GetSalesInvoiceByLOGICALREF", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse> GetSalesInvoiceByLOGICALREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest request);
+        
+        // CODEGEN: Generating message contract since message SaveAutoGIBAddressByClientCardCodeRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveAutoGIBAddressByClientCardCode", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse SaveAutoGIBAddressByClientCardCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://adminsoft.com.tr/SaveAutoGIBAddressByClientCardCode", ReplyAction="*")]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse> SaveAutoGIBAddressByClientCardCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest request);
     }
     
     /// <remarks/>
@@ -313,6 +337,1660 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             set {
                 this.anyAttrField = value;
                 this.RaisePropertyChanged("AnyAttr");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class OutputMessageSalesInvoice : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int codeField;
+        
+        private string descriptionField;
+        
+        private SalesInvoice dataField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+                this.RaisePropertyChanged("Code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public SalesInvoice Data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+                this.RaisePropertyChanged("Data");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class SalesInvoice : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string lOGICALREFField;
+        
+        private string tYPEField;
+        
+        private string nUMBERField;
+        
+        private System.DateTime dATEField;
+        
+        private string nOTES1Field;
+        
+        private string aRP_CODEField;
+        
+        private string sOURCE_WHField;
+        
+        private string sOURCE_COST_GRPField;
+        
+        private string sHIPLOC_CODEField;
+        
+        private string vAT_RATEField;
+        
+        private string aDD_DISCOUNTSField;
+        
+        private string tOTAL_DISCOUNTSField;
+        
+        private string tOTAL_DISCOUNTEDField;
+        
+        private string tOTAL_VATField;
+        
+        private string tOTAL_GROSSField;
+        
+        private string tOTAL_NETField;
+        
+        private string cURR_INVOICEField;
+        
+        private string tC_XRATEField;
+        
+        private string tC_NETField;
+        
+        private string rC_XRATEField;
+        
+        private string rC_NETField;
+        
+        private string dIVISIONField;
+        
+        private string dEPARTMENTField;
+        
+        private string fACTORYField;
+        
+        private SalesInvoiceTransaction tRANSACTIONSField;
+        
+        private string eXCHINFO_ADD_DISCOUNTSField;
+        
+        private string eXCHINFO_TOTAL_DISCOUNTSField;
+        
+        private string eXCHINFO_TOTAL_DISCOUNTEDField;
+        
+        private string eXCHINFO_ADD_EXPENSESField;
+        
+        private string eXCHINFO_TOTAL_EXPENSESField;
+        
+        private string eXCHINFO_DIST_EXPENSEField;
+        
+        private string eXCHINFO_TOTAL_DEPOZITOField;
+        
+        private string eXCHINFO_TOTAL_PROMOTIONSField;
+        
+        private string eXCHINFO_VAT_INC_GROSSField;
+        
+        private string eXCHINFO_TOTAL_VATField;
+        
+        private string eXCHINFO_GROSS_TOTALField;
+        
+        private string eXCHINFO_TOTAL_ADD_TAXField;
+        
+        private string eXCHINFO_TOTAL_EX_ADD_TAXField;
+        
+        private System.DateTime dOC_DATEField;
+        
+        private string aUTOFILL_SLDETAILSField;
+        
+        private string eINVOICEField;
+        
+        private string eSTATUSField;
+        
+        private string eINVOICE_EINVOICETYPSGKField;
+        
+        private string tRCURR_GLOBAL_CODEField;
+        
+        private string eDTCURR_GLOBAL_CODEField;
+        
+        private string cURRSEL_TOTALSField;
+        
+        private string cURRSEL_DETAILSField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LOGICALREF {
+            get {
+                return this.lOGICALREFField;
+            }
+            set {
+                this.lOGICALREFField = value;
+                this.RaisePropertyChanged("LOGICALREF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TYPE {
+            get {
+                return this.tYPEField;
+            }
+            set {
+                this.tYPEField = value;
+                this.RaisePropertyChanged("TYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string NUMBER {
+            get {
+                return this.nUMBERField;
+            }
+            set {
+                this.nUMBERField = value;
+                this.RaisePropertyChanged("NUMBER");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime DATE {
+            get {
+                return this.dATEField;
+            }
+            set {
+                this.dATEField = value;
+                this.RaisePropertyChanged("DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string NOTES1 {
+            get {
+                return this.nOTES1Field;
+            }
+            set {
+                this.nOTES1Field = value;
+                this.RaisePropertyChanged("NOTES1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string ARP_CODE {
+            get {
+                return this.aRP_CODEField;
+            }
+            set {
+                this.aRP_CODEField = value;
+                this.RaisePropertyChanged("ARP_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string SOURCE_WH {
+            get {
+                return this.sOURCE_WHField;
+            }
+            set {
+                this.sOURCE_WHField = value;
+                this.RaisePropertyChanged("SOURCE_WH");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string SOURCE_COST_GRP {
+            get {
+                return this.sOURCE_COST_GRPField;
+            }
+            set {
+                this.sOURCE_COST_GRPField = value;
+                this.RaisePropertyChanged("SOURCE_COST_GRP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string SHIPLOC_CODE {
+            get {
+                return this.sHIPLOC_CODEField;
+            }
+            set {
+                this.sHIPLOC_CODEField = value;
+                this.RaisePropertyChanged("SHIPLOC_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string VAT_RATE {
+            get {
+                return this.vAT_RATEField;
+            }
+            set {
+                this.vAT_RATEField = value;
+                this.RaisePropertyChanged("VAT_RATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string ADD_DISCOUNTS {
+            get {
+                return this.aDD_DISCOUNTSField;
+            }
+            set {
+                this.aDD_DISCOUNTSField = value;
+                this.RaisePropertyChanged("ADD_DISCOUNTS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string TOTAL_DISCOUNTS {
+            get {
+                return this.tOTAL_DISCOUNTSField;
+            }
+            set {
+                this.tOTAL_DISCOUNTSField = value;
+                this.RaisePropertyChanged("TOTAL_DISCOUNTS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string TOTAL_DISCOUNTED {
+            get {
+                return this.tOTAL_DISCOUNTEDField;
+            }
+            set {
+                this.tOTAL_DISCOUNTEDField = value;
+                this.RaisePropertyChanged("TOTAL_DISCOUNTED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string TOTAL_VAT {
+            get {
+                return this.tOTAL_VATField;
+            }
+            set {
+                this.tOTAL_VATField = value;
+                this.RaisePropertyChanged("TOTAL_VAT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string TOTAL_GROSS {
+            get {
+                return this.tOTAL_GROSSField;
+            }
+            set {
+                this.tOTAL_GROSSField = value;
+                this.RaisePropertyChanged("TOTAL_GROSS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string TOTAL_NET {
+            get {
+                return this.tOTAL_NETField;
+            }
+            set {
+                this.tOTAL_NETField = value;
+                this.RaisePropertyChanged("TOTAL_NET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string CURR_INVOICE {
+            get {
+                return this.cURR_INVOICEField;
+            }
+            set {
+                this.cURR_INVOICEField = value;
+                this.RaisePropertyChanged("CURR_INVOICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string TC_XRATE {
+            get {
+                return this.tC_XRATEField;
+            }
+            set {
+                this.tC_XRATEField = value;
+                this.RaisePropertyChanged("TC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string TC_NET {
+            get {
+                return this.tC_NETField;
+            }
+            set {
+                this.tC_NETField = value;
+                this.RaisePropertyChanged("TC_NET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string RC_XRATE {
+            get {
+                return this.rC_XRATEField;
+            }
+            set {
+                this.rC_XRATEField = value;
+                this.RaisePropertyChanged("RC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string RC_NET {
+            get {
+                return this.rC_NETField;
+            }
+            set {
+                this.rC_NETField = value;
+                this.RaisePropertyChanged("RC_NET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string DIVISION {
+            get {
+                return this.dIVISIONField;
+            }
+            set {
+                this.dIVISIONField = value;
+                this.RaisePropertyChanged("DIVISION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string DEPARTMENT {
+            get {
+                return this.dEPARTMENTField;
+            }
+            set {
+                this.dEPARTMENTField = value;
+                this.RaisePropertyChanged("DEPARTMENT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string FACTORY {
+            get {
+                return this.fACTORYField;
+            }
+            set {
+                this.fACTORYField = value;
+                this.RaisePropertyChanged("FACTORY");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public SalesInvoiceTransaction TRANSACTIONS {
+            get {
+                return this.tRANSACTIONSField;
+            }
+            set {
+                this.tRANSACTIONSField = value;
+                this.RaisePropertyChanged("TRANSACTIONS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string EXCHINFO_ADD_DISCOUNTS {
+            get {
+                return this.eXCHINFO_ADD_DISCOUNTSField;
+            }
+            set {
+                this.eXCHINFO_ADD_DISCOUNTSField = value;
+                this.RaisePropertyChanged("EXCHINFO_ADD_DISCOUNTS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string EXCHINFO_TOTAL_DISCOUNTS {
+            get {
+                return this.eXCHINFO_TOTAL_DISCOUNTSField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_DISCOUNTSField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_DISCOUNTS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string EXCHINFO_TOTAL_DISCOUNTED {
+            get {
+                return this.eXCHINFO_TOTAL_DISCOUNTEDField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_DISCOUNTEDField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_DISCOUNTED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string EXCHINFO_ADD_EXPENSES {
+            get {
+                return this.eXCHINFO_ADD_EXPENSESField;
+            }
+            set {
+                this.eXCHINFO_ADD_EXPENSESField = value;
+                this.RaisePropertyChanged("EXCHINFO_ADD_EXPENSES");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public string EXCHINFO_TOTAL_EXPENSES {
+            get {
+                return this.eXCHINFO_TOTAL_EXPENSESField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_EXPENSESField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_EXPENSES");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public string EXCHINFO_DIST_EXPENSE {
+            get {
+                return this.eXCHINFO_DIST_EXPENSEField;
+            }
+            set {
+                this.eXCHINFO_DIST_EXPENSEField = value;
+                this.RaisePropertyChanged("EXCHINFO_DIST_EXPENSE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public string EXCHINFO_TOTAL_DEPOZITO {
+            get {
+                return this.eXCHINFO_TOTAL_DEPOZITOField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_DEPOZITOField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_DEPOZITO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public string EXCHINFO_TOTAL_PROMOTIONS {
+            get {
+                return this.eXCHINFO_TOTAL_PROMOTIONSField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_PROMOTIONSField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_PROMOTIONS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public string EXCHINFO_VAT_INC_GROSS {
+            get {
+                return this.eXCHINFO_VAT_INC_GROSSField;
+            }
+            set {
+                this.eXCHINFO_VAT_INC_GROSSField = value;
+                this.RaisePropertyChanged("EXCHINFO_VAT_INC_GROSS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string EXCHINFO_TOTAL_VAT {
+            get {
+                return this.eXCHINFO_TOTAL_VATField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_VATField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_VAT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string EXCHINFO_GROSS_TOTAL {
+            get {
+                return this.eXCHINFO_GROSS_TOTALField;
+            }
+            set {
+                this.eXCHINFO_GROSS_TOTALField = value;
+                this.RaisePropertyChanged("EXCHINFO_GROSS_TOTAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string EXCHINFO_TOTAL_ADD_TAX {
+            get {
+                return this.eXCHINFO_TOTAL_ADD_TAXField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_ADD_TAXField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_ADD_TAX");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string EXCHINFO_TOTAL_EX_ADD_TAX {
+            get {
+                return this.eXCHINFO_TOTAL_EX_ADD_TAXField;
+            }
+            set {
+                this.eXCHINFO_TOTAL_EX_ADD_TAXField = value;
+                this.RaisePropertyChanged("EXCHINFO_TOTAL_EX_ADD_TAX");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public System.DateTime DOC_DATE {
+            get {
+                return this.dOC_DATEField;
+            }
+            set {
+                this.dOC_DATEField = value;
+                this.RaisePropertyChanged("DOC_DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public string AUTOFILL_SLDETAILS {
+            get {
+                return this.aUTOFILL_SLDETAILSField;
+            }
+            set {
+                this.aUTOFILL_SLDETAILSField = value;
+                this.RaisePropertyChanged("AUTOFILL_SLDETAILS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public string EINVOICE {
+            get {
+                return this.eINVOICEField;
+            }
+            set {
+                this.eINVOICEField = value;
+                this.RaisePropertyChanged("EINVOICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public string ESTATUS {
+            get {
+                return this.eSTATUSField;
+            }
+            set {
+                this.eSTATUSField = value;
+                this.RaisePropertyChanged("ESTATUS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public string EINVOICE_EINVOICETYPSGK {
+            get {
+                return this.eINVOICE_EINVOICETYPSGKField;
+            }
+            set {
+                this.eINVOICE_EINVOICETYPSGKField = value;
+                this.RaisePropertyChanged("EINVOICE_EINVOICETYPSGK");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public string TRCURR_GLOBAL_CODE {
+            get {
+                return this.tRCURR_GLOBAL_CODEField;
+            }
+            set {
+                this.tRCURR_GLOBAL_CODEField = value;
+                this.RaisePropertyChanged("TRCURR_GLOBAL_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
+        public string EDTCURR_GLOBAL_CODE {
+            get {
+                return this.eDTCURR_GLOBAL_CODEField;
+            }
+            set {
+                this.eDTCURR_GLOBAL_CODEField = value;
+                this.RaisePropertyChanged("EDTCURR_GLOBAL_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public string CURRSEL_TOTALS {
+            get {
+                return this.cURRSEL_TOTALSField;
+            }
+            set {
+                this.cURRSEL_TOTALSField = value;
+                this.RaisePropertyChanged("CURRSEL_TOTALS");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public string CURRSEL_DETAILS {
+            get {
+                return this.cURRSEL_DETAILSField;
+            }
+            set {
+                this.cURRSEL_DETAILSField = value;
+                this.RaisePropertyChanged("CURRSEL_DETAILS");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class SalesInvoiceTransaction : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private SalesInvoiceItem[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public SalesInvoiceItem[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://adminsoft.com.tr/")]
+    public partial class SalesInvoiceItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string tYPEField;
+        
+        private string mASTER_CODEField;
+        
+        private string tRCODEField;
+        
+        private System.DateTime dATEField;
+        
+        private string dETAIL_LEVELField;
+        
+        private string dISCEXP_CALCField;
+        
+        private string sOURCEINDEXField;
+        
+        private string sOURCECOSTGRPField;
+        
+        private string iOCODEField;
+        
+        private string qUANTITYField;
+        
+        private string dESCRIPTIONField;
+        
+        private string pRICEField;
+        
+        private string tOTALField;
+        
+        private string cURR_PRICEField;
+        
+        private string pC_PRICEField;
+        
+        private string cURR_TRANSACTIONField;
+        
+        private string tC_XRATEField;
+        
+        private string rC_XRATEField;
+        
+        private string cOST_DISTRField;
+        
+        private string dISCOUNT_DISTRField;
+        
+        private string eXPENSE_DISTRField;
+        
+        private string pROMOTION_DISTRField;
+        
+        private string dISCOUNT_RATEField;
+        
+        private string bASE_AMOUNTField;
+        
+        private string uNIT_CODEField;
+        
+        private string uNIT_CONV1Field;
+        
+        private string uNIT_CONV2Field;
+        
+        private string vAT_INCLUDEDField;
+        
+        private string vAT_RATEField;
+        
+        private string vAT_AMOUNTField;
+        
+        private string vAT_BASEField;
+        
+        private string bILLEDField;
+        
+        private string tOTAL_NETField;
+        
+        private string dISTADDEXPField;
+        
+        private string eDT_CURRField;
+        
+        private string eDT_PRICEField;
+        
+        private string eXCHLINE_INTERNAL_REFERNCEField;
+        
+        private string eXCHLINE_TRANS_REFField;
+        
+        private string eXCHLINE_PRICEField;
+        
+        private string eXCHLINE_TOTALField;
+        
+        private string eXCHLINE_DIST_COSTField;
+        
+        private string eXCHLINE_DIST_DISCField;
+        
+        private string eXCHLINE_DIST_EXPField;
+        
+        private string eXCHLINE_DIST_PROMField;
+        
+        private string eXCHLINE_VAT_AMOUNTField;
+        
+        private string eXCHLINE_VAT_MATRAHField;
+        
+        private string eXCHLINE_LINE_NETField;
+        
+        private string eXCHLINE_DIST_ADD_EXPField;
+        
+        private string eXCHLINE_NET_DISC_AMOUNTField;
+        
+        private string eXCHLINE_VAT_CALC_DIFFField;
+        
+        private string eXCHLINE_EU_VAT_AMOUNTField;
+        
+        private string eXCHLINE_ADD_TAX_AMOUNTField;
+        
+        private string eXCHLINE_ADD_TAX_CONV_FACTField;
+        
+        private string eXCHLINE_ADD_TAX_DISC_AMOUNTField;
+        
+        private string eXCHLINE_EX_ADD_TAX_AMOUNTField;
+        
+        private string eXCHLINE_EX_ADD_TAX_CONVFField;
+        
+        private string aDD_TAX_VAT_MATRAHField;
+        
+        private string eXCHLINE_ADD_TAX_VAT_MATRAHField;
+        
+        private string aDD_TAX_REFField;
+        
+        private string uNIT_GLOBAL_CODEField;
+        
+        private string tRCURR_GLOBAL_CODEField;
+        
+        private string eDTCURR_GLOBAL_CODEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string TYPE {
+            get {
+                return this.tYPEField;
+            }
+            set {
+                this.tYPEField = value;
+                this.RaisePropertyChanged("TYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string MASTER_CODE {
+            get {
+                return this.mASTER_CODEField;
+            }
+            set {
+                this.mASTER_CODEField = value;
+                this.RaisePropertyChanged("MASTER_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TRCODE {
+            get {
+                return this.tRCODEField;
+            }
+            set {
+                this.tRCODEField = value;
+                this.RaisePropertyChanged("TRCODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime DATE {
+            get {
+                return this.dATEField;
+            }
+            set {
+                this.dATEField = value;
+                this.RaisePropertyChanged("DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string DETAIL_LEVEL {
+            get {
+                return this.dETAIL_LEVELField;
+            }
+            set {
+                this.dETAIL_LEVELField = value;
+                this.RaisePropertyChanged("DETAIL_LEVEL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string DISCEXP_CALC {
+            get {
+                return this.dISCEXP_CALCField;
+            }
+            set {
+                this.dISCEXP_CALCField = value;
+                this.RaisePropertyChanged("DISCEXP_CALC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string SOURCEINDEX {
+            get {
+                return this.sOURCEINDEXField;
+            }
+            set {
+                this.sOURCEINDEXField = value;
+                this.RaisePropertyChanged("SOURCEINDEX");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string SOURCECOSTGRP {
+            get {
+                return this.sOURCECOSTGRPField;
+            }
+            set {
+                this.sOURCECOSTGRPField = value;
+                this.RaisePropertyChanged("SOURCECOSTGRP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string IOCODE {
+            get {
+                return this.iOCODEField;
+            }
+            set {
+                this.iOCODEField = value;
+                this.RaisePropertyChanged("IOCODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string QUANTITY {
+            get {
+                return this.qUANTITYField;
+            }
+            set {
+                this.qUANTITYField = value;
+                this.RaisePropertyChanged("QUANTITY");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string DESCRIPTION {
+            get {
+                return this.dESCRIPTIONField;
+            }
+            set {
+                this.dESCRIPTIONField = value;
+                this.RaisePropertyChanged("DESCRIPTION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string PRICE {
+            get {
+                return this.pRICEField;
+            }
+            set {
+                this.pRICEField = value;
+                this.RaisePropertyChanged("PRICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string TOTAL {
+            get {
+                return this.tOTALField;
+            }
+            set {
+                this.tOTALField = value;
+                this.RaisePropertyChanged("TOTAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string CURR_PRICE {
+            get {
+                return this.cURR_PRICEField;
+            }
+            set {
+                this.cURR_PRICEField = value;
+                this.RaisePropertyChanged("CURR_PRICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string PC_PRICE {
+            get {
+                return this.pC_PRICEField;
+            }
+            set {
+                this.pC_PRICEField = value;
+                this.RaisePropertyChanged("PC_PRICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string CURR_TRANSACTION {
+            get {
+                return this.cURR_TRANSACTIONField;
+            }
+            set {
+                this.cURR_TRANSACTIONField = value;
+                this.RaisePropertyChanged("CURR_TRANSACTION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string TC_XRATE {
+            get {
+                return this.tC_XRATEField;
+            }
+            set {
+                this.tC_XRATEField = value;
+                this.RaisePropertyChanged("TC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string RC_XRATE {
+            get {
+                return this.rC_XRATEField;
+            }
+            set {
+                this.rC_XRATEField = value;
+                this.RaisePropertyChanged("RC_XRATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string COST_DISTR {
+            get {
+                return this.cOST_DISTRField;
+            }
+            set {
+                this.cOST_DISTRField = value;
+                this.RaisePropertyChanged("COST_DISTR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string DISCOUNT_DISTR {
+            get {
+                return this.dISCOUNT_DISTRField;
+            }
+            set {
+                this.dISCOUNT_DISTRField = value;
+                this.RaisePropertyChanged("DISCOUNT_DISTR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string EXPENSE_DISTR {
+            get {
+                return this.eXPENSE_DISTRField;
+            }
+            set {
+                this.eXPENSE_DISTRField = value;
+                this.RaisePropertyChanged("EXPENSE_DISTR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string PROMOTION_DISTR {
+            get {
+                return this.pROMOTION_DISTRField;
+            }
+            set {
+                this.pROMOTION_DISTRField = value;
+                this.RaisePropertyChanged("PROMOTION_DISTR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string DISCOUNT_RATE {
+            get {
+                return this.dISCOUNT_RATEField;
+            }
+            set {
+                this.dISCOUNT_RATEField = value;
+                this.RaisePropertyChanged("DISCOUNT_RATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string BASE_AMOUNT {
+            get {
+                return this.bASE_AMOUNTField;
+            }
+            set {
+                this.bASE_AMOUNTField = value;
+                this.RaisePropertyChanged("BASE_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string UNIT_CODE {
+            get {
+                return this.uNIT_CODEField;
+            }
+            set {
+                this.uNIT_CODEField = value;
+                this.RaisePropertyChanged("UNIT_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string UNIT_CONV1 {
+            get {
+                return this.uNIT_CONV1Field;
+            }
+            set {
+                this.uNIT_CONV1Field = value;
+                this.RaisePropertyChanged("UNIT_CONV1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string UNIT_CONV2 {
+            get {
+                return this.uNIT_CONV2Field;
+            }
+            set {
+                this.uNIT_CONV2Field = value;
+                this.RaisePropertyChanged("UNIT_CONV2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string VAT_INCLUDED {
+            get {
+                return this.vAT_INCLUDEDField;
+            }
+            set {
+                this.vAT_INCLUDEDField = value;
+                this.RaisePropertyChanged("VAT_INCLUDED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string VAT_RATE {
+            get {
+                return this.vAT_RATEField;
+            }
+            set {
+                this.vAT_RATEField = value;
+                this.RaisePropertyChanged("VAT_RATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public string VAT_AMOUNT {
+            get {
+                return this.vAT_AMOUNTField;
+            }
+            set {
+                this.vAT_AMOUNTField = value;
+                this.RaisePropertyChanged("VAT_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public string VAT_BASE {
+            get {
+                return this.vAT_BASEField;
+            }
+            set {
+                this.vAT_BASEField = value;
+                this.RaisePropertyChanged("VAT_BASE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public string BILLED {
+            get {
+                return this.bILLEDField;
+            }
+            set {
+                this.bILLEDField = value;
+                this.RaisePropertyChanged("BILLED");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public string TOTAL_NET {
+            get {
+                return this.tOTAL_NETField;
+            }
+            set {
+                this.tOTAL_NETField = value;
+                this.RaisePropertyChanged("TOTAL_NET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public string DISTADDEXP {
+            get {
+                return this.dISTADDEXPField;
+            }
+            set {
+                this.dISTADDEXPField = value;
+                this.RaisePropertyChanged("DISTADDEXP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string EDT_CURR {
+            get {
+                return this.eDT_CURRField;
+            }
+            set {
+                this.eDT_CURRField = value;
+                this.RaisePropertyChanged("EDT_CURR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string EDT_PRICE {
+            get {
+                return this.eDT_PRICEField;
+            }
+            set {
+                this.eDT_PRICEField = value;
+                this.RaisePropertyChanged("EDT_PRICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string EXCHLINE_INTERNAL_REFERNCE {
+            get {
+                return this.eXCHLINE_INTERNAL_REFERNCEField;
+            }
+            set {
+                this.eXCHLINE_INTERNAL_REFERNCEField = value;
+                this.RaisePropertyChanged("EXCHLINE_INTERNAL_REFERNCE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string EXCHLINE_TRANS_REF {
+            get {
+                return this.eXCHLINE_TRANS_REFField;
+            }
+            set {
+                this.eXCHLINE_TRANS_REFField = value;
+                this.RaisePropertyChanged("EXCHLINE_TRANS_REF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public string EXCHLINE_PRICE {
+            get {
+                return this.eXCHLINE_PRICEField;
+            }
+            set {
+                this.eXCHLINE_PRICEField = value;
+                this.RaisePropertyChanged("EXCHLINE_PRICE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public string EXCHLINE_TOTAL {
+            get {
+                return this.eXCHLINE_TOTALField;
+            }
+            set {
+                this.eXCHLINE_TOTALField = value;
+                this.RaisePropertyChanged("EXCHLINE_TOTAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public string EXCHLINE_DIST_COST {
+            get {
+                return this.eXCHLINE_DIST_COSTField;
+            }
+            set {
+                this.eXCHLINE_DIST_COSTField = value;
+                this.RaisePropertyChanged("EXCHLINE_DIST_COST");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public string EXCHLINE_DIST_DISC {
+            get {
+                return this.eXCHLINE_DIST_DISCField;
+            }
+            set {
+                this.eXCHLINE_DIST_DISCField = value;
+                this.RaisePropertyChanged("EXCHLINE_DIST_DISC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public string EXCHLINE_DIST_EXP {
+            get {
+                return this.eXCHLINE_DIST_EXPField;
+            }
+            set {
+                this.eXCHLINE_DIST_EXPField = value;
+                this.RaisePropertyChanged("EXCHLINE_DIST_EXP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public string EXCHLINE_DIST_PROM {
+            get {
+                return this.eXCHLINE_DIST_PROMField;
+            }
+            set {
+                this.eXCHLINE_DIST_PROMField = value;
+                this.RaisePropertyChanged("EXCHLINE_DIST_PROM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
+        public string EXCHLINE_VAT_AMOUNT {
+            get {
+                return this.eXCHLINE_VAT_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_VAT_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_VAT_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public string EXCHLINE_VAT_MATRAH {
+            get {
+                return this.eXCHLINE_VAT_MATRAHField;
+            }
+            set {
+                this.eXCHLINE_VAT_MATRAHField = value;
+                this.RaisePropertyChanged("EXCHLINE_VAT_MATRAH");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public string EXCHLINE_LINE_NET {
+            get {
+                return this.eXCHLINE_LINE_NETField;
+            }
+            set {
+                this.eXCHLINE_LINE_NETField = value;
+                this.RaisePropertyChanged("EXCHLINE_LINE_NET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=47)]
+        public string EXCHLINE_DIST_ADD_EXP {
+            get {
+                return this.eXCHLINE_DIST_ADD_EXPField;
+            }
+            set {
+                this.eXCHLINE_DIST_ADD_EXPField = value;
+                this.RaisePropertyChanged("EXCHLINE_DIST_ADD_EXP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public string EXCHLINE_NET_DISC_AMOUNT {
+            get {
+                return this.eXCHLINE_NET_DISC_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_NET_DISC_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_NET_DISC_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        public string EXCHLINE_VAT_CALC_DIFF {
+            get {
+                return this.eXCHLINE_VAT_CALC_DIFFField;
+            }
+            set {
+                this.eXCHLINE_VAT_CALC_DIFFField = value;
+                this.RaisePropertyChanged("EXCHLINE_VAT_CALC_DIFF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public string EXCHLINE_EU_VAT_AMOUNT {
+            get {
+                return this.eXCHLINE_EU_VAT_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_EU_VAT_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_EU_VAT_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
+        public string EXCHLINE_ADD_TAX_AMOUNT {
+            get {
+                return this.eXCHLINE_ADD_TAX_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_ADD_TAX_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_ADD_TAX_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public string EXCHLINE_ADD_TAX_CONV_FACT {
+            get {
+                return this.eXCHLINE_ADD_TAX_CONV_FACTField;
+            }
+            set {
+                this.eXCHLINE_ADD_TAX_CONV_FACTField = value;
+                this.RaisePropertyChanged("EXCHLINE_ADD_TAX_CONV_FACT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=53)]
+        public string EXCHLINE_ADD_TAX_DISC_AMOUNT {
+            get {
+                return this.eXCHLINE_ADD_TAX_DISC_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_ADD_TAX_DISC_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_ADD_TAX_DISC_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=54)]
+        public string EXCHLINE_EX_ADD_TAX_AMOUNT {
+            get {
+                return this.eXCHLINE_EX_ADD_TAX_AMOUNTField;
+            }
+            set {
+                this.eXCHLINE_EX_ADD_TAX_AMOUNTField = value;
+                this.RaisePropertyChanged("EXCHLINE_EX_ADD_TAX_AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public string EXCHLINE_EX_ADD_TAX_CONVF {
+            get {
+                return this.eXCHLINE_EX_ADD_TAX_CONVFField;
+            }
+            set {
+                this.eXCHLINE_EX_ADD_TAX_CONVFField = value;
+                this.RaisePropertyChanged("EXCHLINE_EX_ADD_TAX_CONVF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        public string ADD_TAX_VAT_MATRAH {
+            get {
+                return this.aDD_TAX_VAT_MATRAHField;
+            }
+            set {
+                this.aDD_TAX_VAT_MATRAHField = value;
+                this.RaisePropertyChanged("ADD_TAX_VAT_MATRAH");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
+        public string EXCHLINE_ADD_TAX_VAT_MATRAH {
+            get {
+                return this.eXCHLINE_ADD_TAX_VAT_MATRAHField;
+            }
+            set {
+                this.eXCHLINE_ADD_TAX_VAT_MATRAHField = value;
+                this.RaisePropertyChanged("EXCHLINE_ADD_TAX_VAT_MATRAH");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        public string ADD_TAX_REF {
+            get {
+                return this.aDD_TAX_REFField;
+            }
+            set {
+                this.aDD_TAX_REFField = value;
+                this.RaisePropertyChanged("ADD_TAX_REF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        public string UNIT_GLOBAL_CODE {
+            get {
+                return this.uNIT_GLOBAL_CODEField;
+            }
+            set {
+                this.uNIT_GLOBAL_CODEField = value;
+                this.RaisePropertyChanged("UNIT_GLOBAL_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        public string TRCURR_GLOBAL_CODE {
+            get {
+                return this.tRCURR_GLOBAL_CODEField;
+            }
+            set {
+                this.tRCURR_GLOBAL_CODEField = value;
+                this.RaisePropertyChanged("TRCURR_GLOBAL_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        public string EDTCURR_GLOBAL_CODE {
+            get {
+                return this.eDTCURR_GLOBAL_CODEField;
+            }
+            set {
+                this.eDTCURR_GLOBAL_CODEField = value;
+                this.RaisePropertyChanged("EDTCURR_GLOBAL_CODE");
             }
         }
         
@@ -554,6 +2232,8 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         private string dEPARTMENTField;
         
+        private string nOTES1Field;
+        
         private string tOTAL_DEBITField;
         
         private string tOTAL_CREDITField;
@@ -642,6 +2322,18 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string NOTES1 {
+            get {
+                return this.nOTES1Field;
+            }
+            set {
+                this.nOTES1Field = value;
+                this.RaisePropertyChanged("NOTES1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public string TOTAL_DEBIT {
             get {
                 return this.tOTAL_DEBITField;
@@ -653,7 +2345,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string TOTAL_CREDIT {
             get {
                 return this.tOTAL_CREDITField;
@@ -665,7 +2357,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public string RC_TOTAL_DEBIT {
             get {
                 return this.rC_TOTAL_DEBITField;
@@ -677,7 +2369,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public string RC_TOTAL_CREDIT {
             get {
                 return this.rC_TOTAL_CREDITField;
@@ -689,7 +2381,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public ArpTransaction TRANSACTIONS {
             get {
                 return this.tRANSACTIONSField;
@@ -701,7 +2393,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public string ARP_CODE {
             get {
                 return this.aRP_CODEField;
@@ -713,7 +2405,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public string BANKACC_CODE {
             get {
                 return this.bANKACC_CODEField;
@@ -779,6 +2471,8 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         private string aRP_CODEField;
         
         private string dATEField;
+        
+        private string dESCRIPTIONField;
         
         private string dEPARTMENTField;
         
@@ -870,6 +2564,18 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string DESCRIPTION {
+            get {
+                return this.dESCRIPTIONField;
+            }
+            set {
+                this.dESCRIPTIONField = value;
+                this.RaisePropertyChanged("DESCRIPTION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string DEPARTMENT {
             get {
                 return this.dEPARTMENTField;
@@ -881,7 +2587,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string DIVISION {
             get {
                 return this.dIVISIONField;
@@ -893,7 +2599,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public string TRCODE {
             get {
                 return this.tRCODEField;
@@ -905,7 +2611,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public string GL_POSTED {
             get {
                 return this.gL_POSTEDField;
@@ -917,7 +2623,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string DEBIT {
             get {
                 return this.dEBITField;
@@ -929,7 +2635,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public string CREDIT {
             get {
                 return this.cREDITField;
@@ -941,7 +2647,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public string SIGN {
             get {
                 return this.sIGNField;
@@ -953,7 +2659,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public string AMOUNT {
             get {
                 return this.aMOUNTField;
@@ -965,7 +2671,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public string CURR_TRANS {
             get {
                 return this.cURR_TRANSField;
@@ -977,7 +2683,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public string TC_XRATE {
             get {
                 return this.tC_XRATEField;
@@ -989,7 +2695,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public string TC_AMOUNT {
             get {
                 return this.tC_AMOUNTField;
@@ -1001,7 +2707,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public string RC_XRATE {
             get {
                 return this.rC_XRATEField;
@@ -1013,7 +2719,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public string RC_AMOUNT {
             get {
                 return this.rC_AMOUNTField;
@@ -1025,7 +2731,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public string BNLN_TC_CURR {
             get {
                 return this.bNLN_TC_CURRField;
@@ -1037,7 +2743,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         public string BNLN_TC_XRATE {
             get {
                 return this.bNLN_TC_XRATEField;
@@ -1049,7 +2755,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public string BNLN_TC_AMOUNT {
             get {
                 return this.bNLN_TC_AMOUNTField;
@@ -1061,7 +2767,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
         public string CURRSEL_TRANS {
             get {
                 return this.cURRSEL_TRANSField;
@@ -1073,7 +2779,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
         public string DISCOUNTED {
             get {
                 return this.dISCOUNTEDField;
@@ -1085,7 +2791,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
         public string DISCOUNT_RATE {
             get {
                 return this.dISCOUNT_RATEField;
@@ -1097,7 +2803,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public string VAT_RATE {
             get {
                 return this.vAT_RATEField;
@@ -1109,7 +2815,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public string DISCOUNTED_AMOUNT {
             get {
                 return this.dISCOUNTED_AMOUNTField;
@@ -1121,7 +2827,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public string DISCACCREF {
             get {
                 return this.dISCACCREFField;
@@ -1133,7 +2839,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public string DISCCENREF {
             get {
                 return this.dISCCENREFField;
@@ -1145,7 +2851,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public string VATRACCREF {
             get {
                 return this.vATRACCREFField;
@@ -1157,7 +2863,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public PaymentList PAYMENT_LIST {
             get {
                 return this.pAYMENT_LISTField;
@@ -1169,7 +2875,7 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public string BANKACC_CODE {
             get {
                 return this.bANKACC_CODEField;
@@ -3390,6 +5096,10 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         
         private string iSFOREIGNField;
         
+        private string pOSTLABELCODEField;
+        
+        private string sENDERLABELCODEField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string LOGICALREF {
@@ -3975,6 +5685,30 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             set {
                 this.iSFOREIGNField = value;
                 this.RaisePropertyChanged("ISFOREIGN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        public string POSTLABELCODE {
+            get {
+                return this.pOSTLABELCODEField;
+            }
+            set {
+                this.pOSTLABELCODEField = value;
+                this.RaisePropertyChanged("POSTLABELCODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public string SENDERLABELCODE {
+            get {
+                return this.sENDERLABELCODEField;
+            }
+            set {
+                this.sENDERLABELCODEField = value;
+                this.RaisePropertyChanged("SENDERLABELCODE");
             }
         }
         
@@ -5220,6 +6954,120 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveSalesInvoice", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveSalesInvoiceRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice salesInvoice;
+        
+        public SaveSalesInvoiceRequest() {
+        }
+        
+        public SaveSalesInvoiceRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice salesInvoice) {
+            this.Authentication = Authentication;
+            this.salesInvoice = salesInvoice;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveSalesInvoiceResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveSalesInvoiceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageSalesInvoice SaveSalesInvoiceResult;
+        
+        public SaveSalesInvoiceResponse() {
+        }
+        
+        public SaveSalesInvoiceResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageSalesInvoice SaveSalesInvoiceResult) {
+            this.SaveSalesInvoiceResult = SaveSalesInvoiceResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSalesInvoiceByLOGICALREF", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetSalesInvoiceByLOGICALREFRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public string LOGICALREF;
+        
+        public GetSalesInvoiceByLOGICALREFRequest() {
+        }
+        
+        public GetSalesInvoiceByLOGICALREFRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string LOGICALREF) {
+            this.Authentication = Authentication;
+            this.LOGICALREF = LOGICALREF;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSalesInvoiceByLOGICALREFResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class GetSalesInvoiceByLOGICALREFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice GetSalesInvoiceByLOGICALREFResult;
+        
+        public GetSalesInvoiceByLOGICALREFResponse() {
+        }
+        
+        public GetSalesInvoiceByLOGICALREFResponse(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice GetSalesInvoiceByLOGICALREFResult) {
+            this.GetSalesInvoiceByLOGICALREFResult = GetSalesInvoiceByLOGICALREFResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveAutoGIBAddressByClientCardCode", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveAutoGIBAddressByClientCardCodeRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://adminsoft.com.tr/")]
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public string clientCode;
+        
+        public SaveAutoGIBAddressByClientCardCodeRequest() {
+        }
+        
+        public SaveAutoGIBAddressByClientCardCodeRequest(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string clientCode) {
+            this.Authentication = Authentication;
+            this.clientCode = clientCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveAutoGIBAddressByClientCardCodeResponse", WrapperNamespace="http://adminsoft.com.tr/", IsWrapped=true)]
+    public partial class SaveAutoGIBAddressByClientCardCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://adminsoft.com.tr/", Order=0)]
+        public bool SaveAutoGIBAddressByClientCardCodeResult;
+        
+        public SaveAutoGIBAddressByClientCardCodeResponse() {
+        }
+        
+        public SaveAutoGIBAddressByClientCardCodeResponse(bool SaveAutoGIBAddressByClientCardCodeResult) {
+            this.SaveAutoGIBAddressByClientCardCodeResult = SaveAutoGIBAddressByClientCardCodeResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface LOGOTIGERSoapChannel : AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap, System.ServiceModel.IClientChannel {
     }
@@ -5875,6 +7723,81 @@ namespace AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO {
             inValue.Authentication = Authentication;
             inValue.CARDTYPE = CARDTYPE;
             return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetBankAccountCardsByCARDTYPEAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveSalesInvoice(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest request) {
+            return base.Channel.SaveSalesInvoice(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.OutputMessageSalesInvoice SaveSalesInvoice(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice salesInvoice) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest();
+            inValue.Authentication = Authentication;
+            inValue.salesInvoice = salesInvoice;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveSalesInvoice(inValue);
+            return retVal.SaveSalesInvoiceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveSalesInvoiceAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest request) {
+            return base.Channel.SaveSalesInvoiceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceResponse> SaveSalesInvoiceAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice salesInvoice) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveSalesInvoiceRequest();
+            inValue.Authentication = Authentication;
+            inValue.salesInvoice = salesInvoice;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveSalesInvoiceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetSalesInvoiceByLOGICALREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest request) {
+            return base.Channel.GetSalesInvoiceByLOGICALREF(request);
+        }
+        
+        public AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SalesInvoice GetSalesInvoiceByLOGICALREF(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string LOGICALREF) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest();
+            inValue.Authentication = Authentication;
+            inValue.LOGICALREF = LOGICALREF;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetSalesInvoiceByLOGICALREF(inValue);
+            return retVal.GetSalesInvoiceByLOGICALREFResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.GetSalesInvoiceByLOGICALREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest request) {
+            return base.Channel.GetSalesInvoiceByLOGICALREFAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFResponse> GetSalesInvoiceByLOGICALREFAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string LOGICALREF) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.GetSalesInvoiceByLOGICALREFRequest();
+            inValue.Authentication = Authentication;
+            inValue.LOGICALREF = LOGICALREF;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).GetSalesInvoiceByLOGICALREFAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveAutoGIBAddressByClientCardCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest request) {
+            return base.Channel.SaveAutoGIBAddressByClientCardCode(request);
+        }
+        
+        public bool SaveAutoGIBAddressByClientCardCode(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string clientCode) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest();
+            inValue.Authentication = Authentication;
+            inValue.clientCode = clientCode;
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse retVal = ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveAutoGIBAddressByClientCardCode(inValue);
+            return retVal.SaveAutoGIBAddressByClientCardCodeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse> AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap.SaveAutoGIBAddressByClientCardCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest request) {
+            return base.Channel.SaveAutoGIBAddressByClientCardCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeResponse> SaveAutoGIBAddressByClientCardCodeAsync(AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.Authentication Authentication, string clientCode) {
+            AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest inValue = new AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.SaveAutoGIBAddressByClientCardCodeRequest();
+            inValue.Authentication = Authentication;
+            inValue.clientCode = clientCode;
+            return ((AS_IGK_WEBSERVICE_TESTS.ServiceReferenceLOGO.LOGOTIGERSoap)(this)).SaveAutoGIBAddressByClientCardCodeAsync(inValue);
         }
     }
 }
